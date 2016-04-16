@@ -15,7 +15,6 @@
 		088F71041CC2FE2E009EA30C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 088F70F91CC2FE2E009EA30C /* main.m */; };
 		088F71051CC2FE2E009EA30C /* MoreInfoContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 088F70FB1CC2FE2E009EA30C /* MoreInfoContainerViewController.m */; };
 		088F71061CC2FE2E009EA30C /* NasaApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 088F70FD1CC2FE2E009EA30C /* NasaApiClient.m */; };
-		088F71071CC2FE2E009EA30C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 088F70FF1CC2FE2E009EA30C /* ViewController.m */; };
 		088F71091CC2FE72009EA30C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 088F71081CC2FE72009EA30C /* Assets.xcassets */; };
 		088F710B1CC2FEBA009EA30C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 088F710A1CC2FEBA009EA30C /* Info.plist */; };
 		088F71101CC2FF57009EA30C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 088F710C1CC2FF57009EA30C /* LaunchScreen.storyboard */; };
@@ -40,8 +39,6 @@
 		088F70FB1CC2FE2E009EA30C /* MoreInfoContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MoreInfoContainerViewController.m; path = space/MoreInfoContainerViewController.m; sourceTree = SOURCE_ROOT; };
 		088F70FC1CC2FE2E009EA30C /* NasaApiClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NasaApiClient.h; path = space/NasaApiClient.h; sourceTree = SOURCE_ROOT; };
 		088F70FD1CC2FE2E009EA30C /* NasaApiClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NasaApiClient.m; path = space/NasaApiClient.m; sourceTree = SOURCE_ROOT; };
-		088F70FE1CC2FE2E009EA30C /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = space/ViewController.h; sourceTree = SOURCE_ROOT; };
-		088F70FF1CC2FE2E009EA30C /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = space/ViewController.m; sourceTree = SOURCE_ROOT; };
 		088F71081CC2FE72009EA30C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = space/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		088F710A1CC2FEBA009EA30C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = space/Info.plist; sourceTree = SOURCE_ROOT; };
 		088F710D1CC2FF57009EA30C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = space/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
@@ -87,20 +84,18 @@
 			children = (
 				088F70EE1CC2FDF7009EA30C /* AppDelegate.h */,
 				088F70EF1CC2FDF7009EA30C /* AppDelegate.m */,
-				088F70F11CC2FE2E009EA30C /* AstronomyPOD.h */,
-				088F70F21CC2FE2E009EA30C /* AstronomyPOD.m */,
 				088F70F31CC2FE2E009EA30C /* Constants.h */,
 				088F70F41CC2FE2E009EA30C /* Constants.m */,
+				088F70F11CC2FE2E009EA30C /* AstronomyPOD.h */,
+				088F70F21CC2FE2E009EA30C /* AstronomyPOD.m */,
+				088F70FC1CC2FE2E009EA30C /* NasaApiClient.h */,
+				088F70FD1CC2FE2E009EA30C /* NasaApiClient.m */,
 				088F70F51CC2FE2E009EA30C /* DisplayViewController.h */,
 				088F70F61CC2FE2E009EA30C /* DisplayViewController.m */,
 				088F70F71CC2FE2E009EA30C /* HomeViewController.h */,
 				088F70F81CC2FE2E009EA30C /* HomeViewController.m */,
 				088F70FA1CC2FE2E009EA30C /* MoreInfoContainerViewController.h */,
 				088F70FB1CC2FE2E009EA30C /* MoreInfoContainerViewController.m */,
-				088F70FC1CC2FE2E009EA30C /* NasaApiClient.h */,
-				088F70FD1CC2FE2E009EA30C /* NasaApiClient.m */,
-				088F70FE1CC2FE2E009EA30C /* ViewController.h */,
-				088F70FF1CC2FE2E009EA30C /* ViewController.m */,
 				088F710C1CC2FF57009EA30C /* LaunchScreen.storyboard */,
 				088F710E1CC2FF57009EA30C /* Main.storyboard */,
 				088F71081CC2FE72009EA30C /* Assets.xcassets */,
@@ -262,7 +257,6 @@
 				088F71021CC2FE2E009EA30C /* DisplayViewController.m in Sources */,
 				088F71061CC2FE2E009EA30C /* NasaApiClient.m in Sources */,
 				088F70F01CC2FDF7009EA30C /* AppDelegate.m in Sources */,
-				088F71071CC2FE2E009EA30C /* ViewController.m in Sources */,
 				088F71001CC2FE2E009EA30C /* AstronomyPOD.m in Sources */,
 				088F71011CC2FE2E009EA30C /* Constants.m in Sources */,
 				088F71041CC2FE2E009EA30C /* main.m in Sources */,
