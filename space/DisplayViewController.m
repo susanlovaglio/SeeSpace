@@ -22,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageWidth;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageHeight;
 @property (nonatomic) BOOL containerIsOpen;
+@property (weak, nonatomic) IBOutlet UIButton *saveImageButton;
 
 @end
 
@@ -34,6 +35,7 @@
     
     self.backButton.hidden = YES;
     self.imageTitle.hidden = YES;
+    self.saveImageButton.hidden = YES;
     
     NasaApiClient *apiClient = [[NasaApiClient alloc]init];
     
@@ -49,6 +51,7 @@
             self.spinner.hidden = YES;
             self.backButton.hidden = NO;
             self.imageTitle.hidden = NO;
+            self.saveImageButton.hidden = NO;
             self.backgroundImage.image = imageFromData;
             self.imageTitle.text = currentImage.imageTitle;
             
@@ -86,15 +89,24 @@
     NSLog(@"tapped");
     [UIView transitionWithView:self.backButton duration:.5 options:UIViewAnimationOptionTransitionCrossDissolve animations:nil completion:nil];
     [UIView transitionWithView:self.imageTitle duration:.5 options:UIViewAnimationOptionTransitionCrossDissolve animations:nil completion:nil];
+     [UIView transitionWithView:self.saveImageButton duration:.5 options:UIViewAnimationOptionTransitionCrossDissolve animations:nil completion:nil];
     
-    
-        if (self.backButton.hidden == NO && self.imageTitle.hidden == NO) {
+        if (self.backButton.hidden == NO) {
             self.backButton.hidden = YES;
             self.imageTitle.hidden = YES;
+            self.saveImageButton.hidden = YES;
         }else{
             self.backButton.hidden = NO;
             self.imageTitle.hidden = NO;
+            self.saveImageButton.hidden = NO;
         }
+}
+- (IBAction)saveImageButtonTapped:(id)sender {
+    NSLog(@"save image been tapped");
+}
+
+-(BOOL)prefersStatusBarHidden{
+    return YES;
 }
 
 @end
