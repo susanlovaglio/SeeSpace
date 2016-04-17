@@ -16,7 +16,6 @@
 		088F71051CC2FE2E009EA30C /* MoreInfoContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 088F70FB1CC2FE2E009EA30C /* MoreInfoContainerViewController.m */; };
 		088F71061CC2FE2E009EA30C /* NasaApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 088F70FD1CC2FE2E009EA30C /* NasaApiClient.m */; };
 		088F71091CC2FE72009EA30C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 088F71081CC2FE72009EA30C /* Assets.xcassets */; };
-		088F710B1CC2FEBA009EA30C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 088F710A1CC2FEBA009EA30C /* Info.plist */; };
 		088F71101CC2FF57009EA30C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 088F710C1CC2FF57009EA30C /* LaunchScreen.storyboard */; };
 		088F71111CC2FF57009EA30C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 088F710E1CC2FF57009EA30C /* Main.storyboard */; };
 		F39A625BED3312FD3549D97B /* libPods-space.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CF1CA05D134C9D67B36EF17 /* libPods-space.a */; };
@@ -160,7 +159,7 @@
 		085858B31CAF497000517B74 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0710;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Susan Lovaglio";
 				TargetAttributes = {
 					085858BA1CAF497000517B74 = {
@@ -193,7 +192,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				088F71101CC2FF57009EA30C /* LaunchScreen.storyboard in Resources */,
-				088F710B1CC2FEBA009EA30C /* Info.plist in Resources */,
 				088F71091CC2FE72009EA30C /* Assets.xcassets in Resources */,
 				088F71111CC2FF57009EA30C /* Main.storyboard in Resources */,
 			);
@@ -375,7 +373,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = space/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.susan.space;
 				PRODUCT_NAME = space;
@@ -391,7 +389,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = space/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.susan.space;
 				PRODUCT_NAME = space;

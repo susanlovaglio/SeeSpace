@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Jf7-eQ-mya">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Jf7-eQ-mya">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -80,16 +81,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="IKb-Mv-HWg">
-                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="IKb-Mv-HWg">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <gestureRecognizers/>
                                 <color key="color" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </activityIndicatorView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uWq-xB-JVq">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gIs-Ad-VY5" userLabel="contentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                    <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gIs-Ad-VY5" userLabel="contentView">
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" id="MWG-uU-gPu"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" id="YM4-tj-mB3"/>
@@ -123,8 +123,8 @@
                                     <action selector="backButtonPressed:" destination="ygG-QG-kfB" eventType="touchUpInside" id="rWL-rd-qB5"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5hU-rY-vkN" userLabel="Image Title">
-                                <rect key="frame" x="20" y="540" width="0.0" height="40"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5hU-rY-vkN" userLabel="Image Title">
+                                <rect key="frame" x="20" y="540" width="560" height="40"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" button="YES" staticText="YES"/>
                                 </accessibility>
@@ -137,18 +137,33 @@
                             </label>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="IKb-Mv-HWg" firstAttribute="leading" secondItem="Pd8-XK-ezJ" secondAttribute="leading" id="47e-8K-Sw1"/>
                             <constraint firstAttribute="bottom" secondItem="5hU-rY-vkN" secondAttribute="bottom" constant="20" symbolic="YES" id="8CM-1P-vMj"/>
+                            <constraint firstItem="IKb-Mv-HWg" firstAttribute="leading" secondItem="bvl-S9-gCS" secondAttribute="trailing" id="8hA-0c-ZDj"/>
                             <constraint firstItem="uWq-xB-JVq" firstAttribute="leading" secondItem="Pd8-XK-ezJ" secondAttribute="leading" id="9M9-M9-MVj"/>
+                            <constraint firstItem="IKb-Mv-HWg" firstAttribute="top" secondItem="YUp-Nk-hhW" secondAttribute="bottom" id="DXt-Ye-zlO"/>
                             <constraint firstItem="uWq-xB-JVq" firstAttribute="centerY" secondItem="Pd8-XK-ezJ" secondAttribute="centerY" id="Lk7-nY-K1y"/>
+                            <constraint firstItem="IKb-Mv-HWg" firstAttribute="trailing" secondItem="Pd8-XK-ezJ" secondAttribute="trailing" id="Nif-td-eyu"/>
                             <constraint firstItem="bvl-S9-gCS" firstAttribute="leading" secondItem="5hU-rY-vkN" secondAttribute="leading" id="Vju-5R-skb"/>
                             <constraint firstItem="uWq-xB-JVq" firstAttribute="centerX" secondItem="Pd8-XK-ezJ" secondAttribute="centerX" id="WCB-O8-Azb"/>
                             <constraint firstItem="bvl-S9-gCS" firstAttribute="leading" secondItem="Pd8-XK-ezJ" secondAttribute="leadingMargin" id="YoM-3d-KaR"/>
                             <constraint firstItem="bvl-S9-gCS" firstAttribute="top" secondItem="YUp-Nk-hhW" secondAttribute="bottom" constant="10" id="d7D-CM-LJ3"/>
+                            <constraint firstItem="5hU-rY-vkN" firstAttribute="top" secondItem="IKb-Mv-HWg" secondAttribute="bottom" id="eOY-n3-Eq9"/>
                             <constraint firstItem="uWq-xB-JVq" firstAttribute="leading" secondItem="Pd8-XK-ezJ" secondAttribute="leading" id="lXK-M6-wJG"/>
                             <constraint firstItem="uWq-xB-JVq" firstAttribute="top" secondItem="YUp-Nk-hhW" secondAttribute="bottom" id="nbN-Ui-wPj"/>
+                            <constraint firstItem="IKb-Mv-HWg" firstAttribute="bottom" secondItem="PAv-xd-u1d" secondAttribute="top" id="w4I-tF-MEc"/>
                             <constraint firstItem="uWq-xB-JVq" firstAttribute="trailing" secondItem="Pd8-XK-ezJ" secondAttribute="trailing" id="xMW-ZJ-Bhe"/>
+                            <constraint firstItem="5hU-rY-vkN" firstAttribute="centerX" secondItem="Pd8-XK-ezJ" secondAttribute="centerX" id="zfI-oU-hFC"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="8hA-0c-ZDj"/>
+                                <exclude reference="eOY-n3-Eq9"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="backButton" destination="bvl-S9-gCS" id="KO1-3k-xnG"/>
                         <outlet property="backgroundImage" destination="gIs-Ad-VY5" id="1Kk-Bh-j8Q"/>
@@ -232,6 +247,10 @@
         <scene sceneID="96y-3b-6Yk">
             <objects>
                 <viewController id="lK5-DE-4jx" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MDf-Eo-oCW"/>
+                        <viewControllerLayoutGuide type="bottom" id="C1t-lb-6JZ"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Hoq-gl-hCM">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
