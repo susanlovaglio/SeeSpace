@@ -103,6 +103,7 @@
 }
 - (IBAction)saveImageButtonTapped:(id)sender {
     NSLog(@"save image been tapped");
+    UIImageWriteToSavedPhotosAlbum(self.backgroundImage.image, nil, nil, nil);
 }
 
 -(BOOL)prefersStatusBarHidden{
