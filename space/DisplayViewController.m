@@ -18,6 +18,9 @@
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *containersVisibleHeight;
 @property (weak, nonatomic) IBOutlet UIView *containerView;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageWidth;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageHeight;
 @property (nonatomic) BOOL containerIsOpen;
 
 @end
@@ -38,17 +41,27 @@
         
     AstronomyPOD *currentImage = [AstronomyPOD imagesFromDictionary:imageDictionaries];
         
-        NSData * imageData = [[NSData alloc] initWithContentsOfURL: currentImage.imageURL];
+        NSData *imageData = [[NSData alloc] initWithContentsOfURL: currentImage.imageURL];
+        
+        UIImage *imageFromData = [UIImage imageWithData:imageData];
         
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
             self.spinner.hidden = YES;
             self.backButton.hidden = NO;
             self.imageTitle.hidden = NO;
-            self.backgroundImage.image = [UIImage imageWithData:imageData];
+            self.backgroundImage.image = imageFromData;
             self.imageTitle.text = currentImage.imageTitle;
             
         }];
     }];
+    
+    
+    CGRect contentRect = CGRectZero;
+    for (UIView *view in self.scrollView.subviews) {
+        contentRect = CGRectUnion(contentRect, view.frame);
+    }
+    self.scrollView.contentSize = contentRect.size;
+    NSLog(@"subviews:%@", self.scrollView.subviews);
     
     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(screenTapped:)];
     [self.view addGestureRecognizer:tapGestureRecognizer];
