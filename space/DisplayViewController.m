@@ -10,6 +10,7 @@
 #import "NasaApiClient.h"
 #import "AstronomyPOD.h"
 #import "HomeViewController.h"
+#import "MBProgressHUD.h"
 
 @interface DisplayViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
@@ -37,6 +38,9 @@
     self.imageTitle.hidden = YES;
     self.saveImageButton.hidden = YES;
     
+
+    self.spinner.hidden = NO;
+    
     NasaApiClient *apiClient = [[NasaApiClient alloc]init];
     
     [apiClient imagesFromApiWithCompletionBlock:^(NSDictionary *imageDictionaries) {
@@ -54,7 +58,11 @@
             self.saveImageButton.hidden = NO;
             self.backgroundImage.image = imageFromData;
             self.imageTitle.text = currentImage.imageTitle;
-            
+//            hud.hidden = YES;
+//            dispatch_async(dispatch_get_main_queue(), ^{
+//                [MBProgressHUD hideHUDForView:self.view animated:YES];
+//            });
+
         }];
     }];
     
@@ -104,6 +112,26 @@
 - (IBAction)saveImageButtonTapped:(id)sender {
     NSLog(@"save image been tapped");
     UIImageWriteToSavedPhotosAlbum(self.backgroundImage.image, nil, nil, nil);
+    
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.mode = MBProgressHUDModeAnnularDeterminate;
+    hud.label.text = @"Saved!";
+
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+        // Do something...
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [MBProgressHUD hideHUDForView:self.view animated:YES];
+            });
+        });
+    });
+    
+    [UIView transitionWithView:hud duration:.8 options:UIViewAnimationOptionTransitionCrossDissolve animations:nil completion:^(BOOL finished) {
+        hud.hidden = YES;
+    }];
+    
 }
 
 -(BOOL)prefersStatusBarHidden{

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		083B89E81CC408BD00B3B794 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 083B89E71CC408BD00B3B794 /* MBProgressHUD.m */; };
 		088F70F01CC2FDF7009EA30C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 088F70EF1CC2FDF7009EA30C /* AppDelegate.m */; };
 		088F71001CC2FE2E009EA30C /* AstronomyPOD.m in Sources */ = {isa = PBXBuildFile; fileRef = 088F70F21CC2FE2E009EA30C /* AstronomyPOD.m */; };
 		088F71011CC2FE2E009EA30C /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 088F70F41CC2FE2E009EA30C /* Constants.m */; };
@@ -22,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		083B89E61CC408BD00B3B794 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = SOURCE_ROOT; };
+		083B89E71CC408BD00B3B794 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = SOURCE_ROOT; };
 		085858BB1CAF497000517B74 /* space.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = space.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		088F70EE1CC2FDF7009EA30C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = space/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		088F70EF1CC2FDF7009EA30C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = space/AppDelegate.m; sourceTree = SOURCE_ROOT; };
@@ -109,6 +112,8 @@
 			isa = PBXGroup;
 			children = (
 				088F70F91CC2FE2E009EA30C /* main.m */,
+				083B89E61CC408BD00B3B794 /* MBProgressHUD.h */,
+				083B89E71CC408BD00B3B794 /* MBProgressHUD.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -256,6 +261,7 @@
 				088F71061CC2FE2E009EA30C /* NasaApiClient.m in Sources */,
 				088F70F01CC2FDF7009EA30C /* AppDelegate.m in Sources */,
 				088F71001CC2FE2E009EA30C /* AstronomyPOD.m in Sources */,
+				083B89E81CC408BD00B3B794 /* MBProgressHUD.m in Sources */,
 				088F71011CC2FE2E009EA30C /* Constants.m in Sources */,
 				088F71041CC2FE2E009EA30C /* main.m in Sources */,
 				088F71031CC2FE2E009EA30C /* HomeViewController.m in Sources */,
