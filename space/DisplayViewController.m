@@ -12,7 +12,8 @@
 #import "HomeViewController.h"
 #import "MBProgressHUD.h"
 
-@interface DisplayViewController ()
+@interface DisplayViewController() <UIScrollViewDelegate>
+
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
 @property (weak, nonatomic) IBOutlet UIButton *backButton;
 @property (weak, nonatomic) IBOutlet UILabel *imageTitle;
@@ -31,8 +32,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.containerIsOpen = NO;
+
+//    self.containerIsOpen = NO;
     
     self.backButton.hidden = YES;
     self.imageTitle.hidden = YES;
@@ -58,11 +59,6 @@
             self.saveImageButton.hidden = NO;
             self.backgroundImage.image = imageFromData;
             self.imageTitle.text = currentImage.imageTitle;
-//            hud.hidden = YES;
-//            dispatch_async(dispatch_get_main_queue(), ^{
-//                [MBProgressHUD hideHUDForView:self.view animated:YES];
-//            });
-
         }];
     }];
     
@@ -81,6 +77,17 @@
     [swipeGestureRecognizer setDirection:UISwipeGestureRecognizerDirectionUp];
     [self.view addGestureRecognizer:swipeGestureRecognizer];
     
+    self.scrollView.minimumZoomScale = .5;
+    self.scrollView.maximumZoomScale = self.view.frame.size.height/100;
+    self.scrollView.contentSize = self.backgroundImage.frame.size;
+    self.scrollView.delegate = self;
+    
+}
+
+
+-(UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView{
+    
+    return self.backgroundImage;
 }
 
 -(void)swipedUp: (UISwipeGestureRecognizer*)swipe{
@@ -97,7 +104,7 @@
     NSLog(@"tapped");
     [UIView transitionWithView:self.backButton duration:.5 options:UIViewAnimationOptionTransitionCrossDissolve animations:nil completion:nil];
     [UIView transitionWithView:self.imageTitle duration:.5 options:UIViewAnimationOptionTransitionCrossDissolve animations:nil completion:nil];
-     [UIView transitionWithView:self.saveImageButton duration:.5 options:UIViewAnimationOptionTransitionCrossDissolve animations:nil completion:nil];
+    [UIView transitionWithView:self.saveImageButton duration:.5 options:UIViewAnimationOptionTransitionCrossDissolve animations:nil completion:nil];
     
         if (self.backButton.hidden == NO) {
             self.backButton.hidden = YES;

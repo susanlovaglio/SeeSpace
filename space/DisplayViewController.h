@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DisplayViewController : UIViewController
+@interface DisplayViewController : UIViewController <UIScrollViewDelegate>
 
 @end

@@ -102,10 +102,10 @@
                                 <gestureRecognizers/>
                                 <color key="color" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </activityIndicatorView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uWq-xB-JVq">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uWq-xB-JVq">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gIs-Ad-VY5" userLabel="contentView">
+                                    <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gIs-Ad-VY5" userLabel="contentView">
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" id="MWG-uU-gPu"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" id="YM4-tj-mB3"/>
@@ -194,6 +194,7 @@
                         <outlet property="imageTitle" destination="5hU-rY-vkN" id="8iw-ZZ-gdO"/>
                         <outlet property="imageWidth" destination="MWG-uU-gPu" id="W5p-r0-DpE"/>
                         <outlet property="saveImageButton" destination="AU4-9u-4N2" id="lGH-RD-rVY"/>
+                        <outlet property="scrollView" destination="uWq-xB-JVq" id="mf1-CU-77d"/>
                         <outlet property="spinner" destination="IKb-Mv-HWg" id="kPL-1u-6YL"/>
                     </connections>
                 </viewController>
