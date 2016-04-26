@@ -139,7 +139,7 @@
                                     <action selector="backButtonPressed:" destination="ygG-QG-kfB" eventType="touchUpInside" id="rWL-rd-qB5"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5hU-rY-vkN" userLabel="Image Title">
+                            <label opaque="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5hU-rY-vkN" userLabel="Image Title">
                                 <rect key="frame" x="20" y="520" width="560" height="30"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" button="YES" staticText="YES"/>
@@ -188,8 +188,6 @@
                     <connections>
                         <outlet property="backButton" destination="bvl-S9-gCS" id="KO1-3k-xnG"/>
                         <outlet property="backgroundImage" destination="gIs-Ad-VY5" id="1Kk-Bh-j8Q"/>
-                        <outlet property="containerView" destination="ypl-62-nWC" id="Td1-pm-kQB"/>
-                        <outlet property="containersVisibleHeight" destination="aUY-GW-pvL" id="Gsg-UQ-DqG"/>
                         <outlet property="imageHeight" destination="YM4-tj-mB3" id="TsR-NO-rfj"/>
                         <outlet property="imageTitle" destination="5hU-rY-vkN" id="8iw-ZZ-gdO"/>
                         <outlet property="imageWidth" destination="MWG-uU-gPu" id="W5p-r0-DpE"/>
@@ -202,73 +200,8 @@
             </objects>
             <point key="canvasLocation" x="1901" y="-87"/>
         </scene>
-        <!--More Info Container View Controller-->
-        <scene sceneID="g3O-F8-3wx">
-            <objects>
-                <viewController id="Kt6-sh-LZE" customClass="MoreInfoContainerViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="QJS-Yp-IN8"/>
-                        <viewControllerLayoutGuide type="bottom" id="yqL-vD-ejf"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="oxq-oS-D8n">
-                        <rect key="frame" x="0.0" y="0.0" width="598" height="400"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E3t-Wg-BsS">
-                                <rect key="frame" x="289" y="10" width="20" height="10"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="10" id="Ifj-xE-s9t"/>
-                                    <constraint firstAttribute="width" constant="20" id="Qzd-oN-WHz"/>
-                                </constraints>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" backgroundImage="swipeUp"/>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="if5-Mo-juu">
-                                <rect key="frame" x="179" y="96" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ypl-62-nWC">
-                                <rect key="frame" x="-2" y="15" width="600" height="66"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="66" id="aUY-GW-pvL"/>
-                                </constraints>
-                                <connections>
-                                    <segue destination="Kt6-sh-LZE" kind="embed" id="dII-Mp-RkW"/>
-                                </connections>
-                            </containerView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="E3t-Wg-BsS" secondAttribute="trailing" id="JUb-gb-irc"/>
-                            <constraint firstItem="E3t-Wg-BsS" firstAttribute="top" secondItem="QJS-Yp-IN8" secondAttribute="bottom" constant="10" id="kGz-MY-rWW"/>
-                            <constraint firstItem="E3t-Wg-BsS" firstAttribute="centerX" secondItem="oxq-oS-D8n" secondAttribute="centerX" id="rWV-ZH-7G5"/>
-                            <constraint firstItem="E3t-Wg-BsS" firstAttribute="leading" secondItem="oxq-oS-D8n" secondAttribute="leading" id="rrZ-fF-ZhA"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="JUb-gb-irc"/>
-                                <exclude reference="rrZ-fF-ZhA"/>
-                            </mask>
-                        </variation>
-                    </view>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="598" height="400"/>
-                    <connections>
-                        <outlet property="swipeUpButton" destination="E3t-Wg-BsS" id="KvM-b6-h22"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fFc-Qy-WPc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1900" y="574"/>
-        </scene>
     </scenes>
     <resources>
         <image name="space-stars-road" width="854" height="534"/>
-        <image name="swipeUp" width="107" height="62"/>
     </resources>
 </document>

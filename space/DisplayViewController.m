@@ -18,13 +18,11 @@
 @property (weak, nonatomic) IBOutlet UIButton *backButton;
 @property (weak, nonatomic) IBOutlet UILabel *imageTitle;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *containersVisibleHeight;
-@property (weak, nonatomic) IBOutlet UIView *containerView;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageWidth;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageHeight;
-@property (nonatomic) BOOL containerIsOpen;
 @property (weak, nonatomic) IBOutlet UIButton *saveImageButton;
+@property (strong, nonatomic) NSString *moreInfo;
 
 @end
 
@@ -39,7 +37,6 @@
     self.imageTitle.hidden = YES;
     self.saveImageButton.hidden = YES;
     
-
     self.spinner.hidden = NO;
     
     NasaApiClient *apiClient = [[NasaApiClient alloc]init];
@@ -59,6 +56,7 @@
             self.saveImageButton.hidden = NO;
             self.backgroundImage.image = imageFromData;
             self.imageTitle.text = currentImage.imageTitle;
+            self.moreInfo = currentImage.imageExplanation;
         }];
     }];
     

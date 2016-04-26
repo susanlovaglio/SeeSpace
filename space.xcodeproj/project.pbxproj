@@ -14,7 +14,6 @@
 		088F71021CC2FE2E009EA30C /* DisplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 088F70F61CC2FE2E009EA30C /* DisplayViewController.m */; };
 		088F71031CC2FE2E009EA30C /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 088F70F81CC2FE2E009EA30C /* HomeViewController.m */; };
 		088F71041CC2FE2E009EA30C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 088F70F91CC2FE2E009EA30C /* main.m */; };
-		088F71051CC2FE2E009EA30C /* MoreInfoContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 088F70FB1CC2FE2E009EA30C /* MoreInfoContainerViewController.m */; };
 		088F71061CC2FE2E009EA30C /* NasaApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 088F70FD1CC2FE2E009EA30C /* NasaApiClient.m */; };
 		088F71091CC2FE72009EA30C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 088F71081CC2FE72009EA30C /* Assets.xcassets */; };
 		088F71101CC2FF57009EA30C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 088F710C1CC2FF57009EA30C /* LaunchScreen.storyboard */; };
@@ -37,8 +36,6 @@
 		088F70F71CC2FE2E009EA30C /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = space/HomeViewController.h; sourceTree = SOURCE_ROOT; };
 		088F70F81CC2FE2E009EA30C /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = space/HomeViewController.m; sourceTree = SOURCE_ROOT; };
 		088F70F91CC2FE2E009EA30C /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = space/main.m; sourceTree = SOURCE_ROOT; };
-		088F70FA1CC2FE2E009EA30C /* MoreInfoContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MoreInfoContainerViewController.h; path = space/MoreInfoContainerViewController.h; sourceTree = SOURCE_ROOT; };
-		088F70FB1CC2FE2E009EA30C /* MoreInfoContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MoreInfoContainerViewController.m; path = space/MoreInfoContainerViewController.m; sourceTree = SOURCE_ROOT; };
 		088F70FC1CC2FE2E009EA30C /* NasaApiClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NasaApiClient.h; path = space/NasaApiClient.h; sourceTree = SOURCE_ROOT; };
 		088F70FD1CC2FE2E009EA30C /* NasaApiClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NasaApiClient.m; path = space/NasaApiClient.m; sourceTree = SOURCE_ROOT; };
 		088F71081CC2FE72009EA30C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = space/Assets.xcassets; sourceTree = SOURCE_ROOT; };
@@ -96,8 +93,6 @@
 				088F70F61CC2FE2E009EA30C /* DisplayViewController.m */,
 				088F70F71CC2FE2E009EA30C /* HomeViewController.h */,
 				088F70F81CC2FE2E009EA30C /* HomeViewController.m */,
-				088F70FA1CC2FE2E009EA30C /* MoreInfoContainerViewController.h */,
-				088F70FB1CC2FE2E009EA30C /* MoreInfoContainerViewController.m */,
 				088F710C1CC2FF57009EA30C /* LaunchScreen.storyboard */,
 				088F710E1CC2FF57009EA30C /* Main.storyboard */,
 				088F71081CC2FE72009EA30C /* Assets.xcassets */,
@@ -265,7 +260,6 @@
 				088F71011CC2FE2E009EA30C /* Constants.m in Sources */,
 				088F71041CC2FE2E009EA30C /* main.m in Sources */,
 				088F71031CC2FE2E009EA30C /* HomeViewController.m in Sources */,
-				088F71051CC2FE2E009EA30C /* MoreInfoContainerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DisplayViewController : UIViewController <UIScrollViewDelegate>
+@interface DisplayViewController : UIViewController <UIScrollViewDelegate, UIPopoverPresentationControllerDelegate>
 
 @end
