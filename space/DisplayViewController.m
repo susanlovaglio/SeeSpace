@@ -11,6 +11,8 @@
 #import "AstronomyPOD.h"
 #import "HomeViewController.h"
 #import "MBProgressHUD.h"
+#import "AppDelegate.h"
+
 
 @interface DisplayViewController() <UIScrollViewDelegate>
 
@@ -23,6 +25,7 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageHeight;
 @property (weak, nonatomic) IBOutlet UIButton *saveImageButton;
 @property (strong, nonatomic) NSString *moreInfo;
+@property (strong, nonatomic) CMMotionManager *motionManager;
 
 @end
 
@@ -30,8 +33,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-//    self.containerIsOpen = NO;
     
     self.backButton.hidden = YES;
     self.imageTitle.hidden = YES;
@@ -66,7 +67,6 @@
         contentRect = CGRectUnion(contentRect, view.frame);
     }
     self.scrollView.contentSize = contentRect.size;
-    NSLog(@"subviews:%@", self.scrollView.subviews);
     
     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(screenTapped:)];
     [self.view addGestureRecognizer:tapGestureRecognizer];
@@ -80,7 +80,29 @@
     self.scrollView.contentSize = self.backgroundImage.frame.size;
     self.scrollView.delegate = self;
     
+    
+    //initialize the motion manager
+    self.motionManager = [[CMMotionManager alloc]init];
+    
+    DisplayViewController * __weak weakSelf = self;
+//    if (self.motionManager.accelerometerAvailable) {
+//        self.motionManager.accelerometerUpdateInterval = 0.01f;
+//        [self.motionManager startAccelerometerUpdatesToQueue:[NSOperationQueue mainQueue]
+//                                      withHandler:^(CMAccelerometerData *data, NSError *error) {
+//                                          double rotation = atan2(data.acceleration.x, data.acceleration.y) - M_PI;
+//                                          weakSelf.backgroundImage.transform = CGAffineTransformMakeRotation(rotation);
+//                                      }];
+//    }
+    
+    if (self.motionManager.deviceMotionAvailable) {
+        self.motionManager.deviceMotionUpdateInterval = .01f;
+        [self.motionManager startDeviceMotionUpdatesToQueue:[NSOperationQueue mainQueue] withHandler:^(CMDeviceMotion *motion, NSError *error) {
+            double rotation = atan2(motion.gravity.x, motion.gravity.y) - M_PI;
+            weakSelf.backgroundImage.transform = CGAffineTransformMakeRotation(rotation);
+        }];
+    }
 }
+
 
 
 -(UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView{

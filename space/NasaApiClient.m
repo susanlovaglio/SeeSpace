@@ -16,7 +16,6 @@ NSString *const NASA_API_URL = @"https://api.nasa.gov/planetary/apod?api_key=";
 -(void)imagesFromApiWithCompletionBlock:(void (^)(NSDictionary *))completionBlock{
     
     NSString *urlString = [NSString stringWithFormat:@"%@%@", NASA_API_URL, NASA_KEY];
-    NSLog(@"%@", urlString);
     NSURL *url = [NSURL URLWithString: urlString];
     
     NSURLSession *session = [NSURLSession sharedSession];
@@ -28,7 +27,6 @@ NSString *const NASA_API_URL = @"https://api.nasa.gov/planetary/apod?api_key=";
                                                                                    NSError *error) {
     
         NSDictionary *images = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-        NSLog(@"%@", images);
         
         completionBlock(images);
     }];
