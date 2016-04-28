@@ -62,11 +62,11 @@
     }];
     
     
-    CGRect contentRect = CGRectZero;
-    for (UIView *view in self.scrollView.subviews) {
-        contentRect = CGRectUnion(contentRect, view.frame);
-    }
-    self.scrollView.contentSize = contentRect.size;
+//    CGRect contentRect = CGRectZero;
+//    for (UIView *view in self.scrollView.subviews) {
+//        contentRect = CGRectUnion(contentRect, view.frame);
+//    }
+//    self.scrollView.contentSize = contentRect.size;
     
     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(screenTapped:)];
     [self.view addGestureRecognizer:tapGestureRecognizer];
@@ -75,8 +75,8 @@
     [swipeGestureRecognizer setDirection:UISwipeGestureRecognizerDirectionUp];
     [self.view addGestureRecognizer:swipeGestureRecognizer];
     
-    self.scrollView.minimumZoomScale = .5;
-    self.scrollView.maximumZoomScale = self.view.frame.size.height/100;
+    self.scrollView.minimumZoomScale =.55;
+    self.scrollView.maximumZoomScale =  self.view.bounds.size.height/100;
     self.scrollView.contentSize = self.backgroundImage.frame.size;
     self.scrollView.delegate = self;
     
@@ -93,17 +93,27 @@
 //                                          weakSelf.backgroundImage.transform = CGAffineTransformMakeRotation(rotation);
 //                                      }];
 //    }
-    
-    if (self.motionManager.deviceMotionAvailable) {
-        self.motionManager.deviceMotionUpdateInterval = .01f;
-        [self.motionManager startDeviceMotionUpdatesToQueue:[NSOperationQueue mainQueue] withHandler:^(CMDeviceMotion *motion, NSError *error) {
-            double rotation = atan2(motion.gravity.x, motion.gravity.y) - M_PI;
-            weakSelf.backgroundImage.transform = CGAffineTransformMakeRotation(rotation);
-        }];
-    }
+//    
+//    if (self.motionManager.accelerometerAvailable) {
+//        self.motionManager.deviceMotionUpdateInterval = .01f;
+//        [self.motionManager startAccelerometerUpdatesToQueue:[NSOperationQueue mainQueue] withHandler:^(CMAccelerometerData *data, NSError *error) {
+//            
+//            if(data.acceleration.x >0.1){
+//                NSString *accelerationDirection=@"right";
+//                [self adjustLocation:accelerationDirection];
+//            } else if(data.acceleration.x <-0.1){
+//                NSString *accelerationDirection=@"left";
+//                [self adjustLocation:accelerationDirection];
+//            }
+//            
+////            double rotation = atan2(motion.gravity.x, motion.gravity.y) - M_PI;
+//            
+////            weakSelf.backgroundImage.transform = CGAffineTransformMakeRotation(rotation);
+//        }];
+//    }
+//}
+
 }
-
-
 
 -(UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView{
     
