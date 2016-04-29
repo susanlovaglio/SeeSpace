@@ -21,11 +21,12 @@
 @property (weak, nonatomic) IBOutlet UILabel *imageTitle;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageWidth;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageHeight;
+@property (nonatomic) CGFloat imageWidth;
+@property (nonatomic) CGFloat imageHeight;
 @property (weak, nonatomic) IBOutlet UIButton *saveImageButton;
 @property (strong, nonatomic) NSString *moreInfo;
 @property (strong, nonatomic) CMMotionManager *motionManager;
+
 
 @end
 
@@ -61,62 +62,26 @@
         }];
     }];
     
-    
-//    CGRect contentRect = CGRectZero;
-//    for (UIView *view in self.scrollView.subviews) {
-//        contentRect = CGRectUnion(contentRect, view.frame);
-//    }
-//    self.scrollView.contentSize = contentRect.size;
-    
     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(screenTapped:)];
     [self.view addGestureRecognizer:tapGestureRecognizer];
     
     UISwipeGestureRecognizer *swipeGestureRecognizer = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(swipedUp:)];
     [swipeGestureRecognizer setDirection:UISwipeGestureRecognizerDirectionUp];
     [self.view addGestureRecognizer:swipeGestureRecognizer];
-    
-    self.scrollView.minimumZoomScale =.55;
-    self.scrollView.maximumZoomScale =  self.view.bounds.size.height/100;
-    self.scrollView.contentSize = self.backgroundImage.frame.size;
+
     self.scrollView.delegate = self;
-    
-    
     //initialize the motion manager
     self.motionManager = [[CMMotionManager alloc]init];
     
-    DisplayViewController * __weak weakSelf = self;
-//    if (self.motionManager.accelerometerAvailable) {
-//        self.motionManager.accelerometerUpdateInterval = 0.01f;
-//        [self.motionManager startAccelerometerUpdatesToQueue:[NSOperationQueue mainQueue]
-//                                      withHandler:^(CMAccelerometerData *data, NSError *error) {
-//                                          double rotation = atan2(data.acceleration.x, data.acceleration.y) - M_PI;
-//                                          weakSelf.backgroundImage.transform = CGAffineTransformMakeRotation(rotation);
-//                                      }];
-//    }
-//    
-//    if (self.motionManager.accelerometerAvailable) {
-//        self.motionManager.deviceMotionUpdateInterval = .01f;
-//        [self.motionManager startAccelerometerUpdatesToQueue:[NSOperationQueue mainQueue] withHandler:^(CMAccelerometerData *data, NSError *error) {
-//            
-//            if(data.acceleration.x >0.1){
-//                NSString *accelerationDirection=@"right";
-//                [self adjustLocation:accelerationDirection];
-//            } else if(data.acceleration.x <-0.1){
-//                NSString *accelerationDirection=@"left";
-//                [self adjustLocation:accelerationDirection];
-//            }
-//            
-////            double rotation = atan2(motion.gravity.x, motion.gravity.y) - M_PI;
-//            
-////            weakSelf.backgroundImage.transform = CGAffineTransformMakeRotation(rotation);
-//        }];
-//    }
-//}
+//    DisplayViewController * __weak weakSelf = self;
 
 }
 
 -(UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView{
     
+    self.scrollView.minimumZoomScale =  1.25;
+    self.scrollView.maximumZoomScale = self.view.frame.size.height;
+
     return self.backgroundImage;
 }
 

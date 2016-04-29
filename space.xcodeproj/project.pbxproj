@@ -19,6 +19,10 @@
 		088F71101CC2FF57009EA30C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 088F710C1CC2FF57009EA30C /* LaunchScreen.storyboard */; };
 		088F71111CC2FF57009EA30C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 088F710E1CC2FF57009EA30C /* Main.storyboard */; };
 		08ADAD101CD0FE6F00F06C4A /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08ADAD0F1CD0FE6F00F06C4A /* CoreMotion.framework */; };
+		08ADAD3C1CD3CE1800F06C4A /* PODDisplyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08ADAD3B1CD3CE1800F06C4A /* PODDisplyViewController.m */; };
+		08ADAD3F1CD3D00C00F06C4A /* LaunchScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08ADAD3E1CD3D00C00F06C4A /* LaunchScreenViewController.m */; };
+		08ADAD431CD3D28900F06C4A /* nasalization rg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08ADAD421CD3D28900F06C4A /* nasalization rg.ttf */; };
+		08ADAD451CD3E21F00F06C4A /* DIN-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 08ADAD441CD3E21F00F06C4A /* DIN-Light.otf */; };
 		F39A625BED3312FD3549D97B /* libPods-space.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CF1CA05D134C9D67B36EF17 /* libPods-space.a */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +48,12 @@
 		088F710D1CC2FF57009EA30C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = space/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 		088F710F1CC2FF57009EA30C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = space/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		08ADAD0F1CD0FE6F00F06C4A /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		08ADAD3A1CD3CE1800F06C4A /* PODDisplyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PODDisplyViewController.h; path = space/PODDisplyViewController.h; sourceTree = SOURCE_ROOT; };
+		08ADAD3B1CD3CE1800F06C4A /* PODDisplyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PODDisplyViewController.m; path = space/PODDisplyViewController.m; sourceTree = SOURCE_ROOT; };
+		08ADAD3D1CD3D00C00F06C4A /* LaunchScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LaunchScreenViewController.h; path = space/LaunchScreenViewController.h; sourceTree = SOURCE_ROOT; };
+		08ADAD3E1CD3D00C00F06C4A /* LaunchScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LaunchScreenViewController.m; path = space/LaunchScreenViewController.m; sourceTree = SOURCE_ROOT; };
+		08ADAD421CD3D28900F06C4A /* nasalization rg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "nasalization rg.ttf"; sourceTree = SOURCE_ROOT; };
+		08ADAD441CD3E21F00F06C4A /* DIN-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DIN-Light.otf"; sourceTree = SOURCE_ROOT; };
 		61EB50F4F024B73493C39BB0 /* Pods-space.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-space.release.xcconfig"; path = "Pods/Target Support Files/Pods-space/Pods-space.release.xcconfig"; sourceTree = "<group>"; };
 		7CF1CA05D134C9D67B36EF17 /* libPods-space.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-space.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1C8748F53B93C04A33C705A /* Pods-space.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-space.debug.xcconfig"; path = "Pods/Target Support Files/Pods-space/Pods-space.debug.xcconfig"; sourceTree = "<group>"; };
@@ -92,10 +102,14 @@
 				088F70F21CC2FE2E009EA30C /* AstronomyPOD.m */,
 				088F70FC1CC2FE2E009EA30C /* NasaApiClient.h */,
 				088F70FD1CC2FE2E009EA30C /* NasaApiClient.m */,
+				08ADAD3D1CD3D00C00F06C4A /* LaunchScreenViewController.h */,
+				08ADAD3E1CD3D00C00F06C4A /* LaunchScreenViewController.m */,
 				088F70F51CC2FE2E009EA30C /* DisplayViewController.h */,
 				088F70F61CC2FE2E009EA30C /* DisplayViewController.m */,
 				088F70F71CC2FE2E009EA30C /* HomeViewController.h */,
 				088F70F81CC2FE2E009EA30C /* HomeViewController.m */,
+				08ADAD3A1CD3CE1800F06C4A /* PODDisplyViewController.h */,
+				08ADAD3B1CD3CE1800F06C4A /* PODDisplyViewController.m */,
 				088F710C1CC2FF57009EA30C /* LaunchScreen.storyboard */,
 				088F710E1CC2FF57009EA30C /* Main.storyboard */,
 				088F71081CC2FE72009EA30C /* Assets.xcassets */,
@@ -109,6 +123,8 @@
 		085858BE1CAF497000517B74 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				08ADAD421CD3D28900F06C4A /* nasalization rg.ttf */,
+				08ADAD441CD3E21F00F06C4A /* DIN-Light.otf */,
 				088F70F91CC2FE2E009EA30C /* main.m */,
 				083B89E61CC408BD00B3B794 /* MBProgressHUD.h */,
 				083B89E71CC408BD00B3B794 /* MBProgressHUD.m */,
@@ -195,7 +211,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08ADAD451CD3E21F00F06C4A /* DIN-Light.otf in Resources */,
 				088F71101CC2FF57009EA30C /* LaunchScreen.storyboard in Resources */,
+				08ADAD431CD3D28900F06C4A /* nasalization rg.ttf in Resources */,
 				088F71091CC2FE72009EA30C /* Assets.xcassets in Resources */,
 				088F71111CC2FF57009EA30C /* Main.storyboard in Resources */,
 			);
@@ -257,9 +275,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				088F71021CC2FE2E009EA30C /* DisplayViewController.m in Sources */,
+				08ADAD3C1CD3CE1800F06C4A /* PODDisplyViewController.m in Sources */,
 				088F71061CC2FE2E009EA30C /* NasaApiClient.m in Sources */,
 				088F70F01CC2FDF7009EA30C /* AppDelegate.m in Sources */,
 				088F71001CC2FE2E009EA30C /* AstronomyPOD.m in Sources */,
+				08ADAD3F1CD3D00C00F06C4A /* LaunchScreenViewController.m in Sources */,
 				083B89E81CC408BD00B3B794 /* MBProgressHUD.m in Sources */,
 				088F71011CC2FE2E009EA30C /* Constants.m in Sources */,
 				088F71041CC2FE2E009EA30C /* main.m in Sources */,
