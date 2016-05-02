@@ -43,8 +43,10 @@
 	</array>
 	<key>UIAppFonts</key>
 	<array>
-		<string>nasalization rg.ttf</string>
 		<string>DIN-Light.otf</string>
+		<string>nasalization rg.ttf</string>
 	</array>
+	<key>UIStatusBarHidden</key>
+	<true/>
 </dict>
 </plist>

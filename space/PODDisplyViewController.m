@@ -45,10 +45,9 @@
 
     //make a scroll view
     self.scrollView = [[UIScrollView alloc]initWithFrame:self.view.bounds];
-    self.scrollView.minimumZoomScale = .38;
+    self.scrollView.minimumZoomScale = .36;
     self.scrollView.maximumZoomScale = 6;
     self.scrollView.delegate = self;
-
     
     // make the back button
     self.backButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -103,8 +102,8 @@
             self.imageTitle.hidden = NO;
             self.saveImageButton.hidden = NO;
             self.backgroundImage = imageFromData;
-            self.scrollView.contentSize = CGSizeMake(imageFromData.size.width, imageFromData.size.height);
-            self.imageViewContainer = [[UIImageView alloc]initWithImage:imageFromData];
+            self.scrollView.contentSize = CGSizeMake(self.backgroundImage.size.width, self.backgroundImage.size.height);
+            self.imageViewContainer = [[UIImageView alloc]initWithImage:self.backgroundImage];
             [self.scrollView addSubview:self.imageViewContainer];
             self.imageTitle.text = currentImage.imageTitle;
             self.moreInfo = currentImage.imageExplanation;
@@ -123,7 +122,6 @@
     
     return self.imageViewContainer;
 }
-
 
 - (void)screenTapped:(UITapGestureRecognizer *)sender {
     NSLog(@"tapped");
@@ -145,6 +143,7 @@
 - (IBAction)saveImageButtonTapped:(id)sender {
     NSLog(@"save image been tapped");
     UIImageWriteToSavedPhotosAlbum(self.backgroundImage, nil, nil, nil);
+    self.spinner.hidden = NO;
     
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     hud.mode = MBProgressHUDModeAnnularDeterminate;
@@ -156,6 +155,7 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             
             dispatch_async(dispatch_get_main_queue(), ^{
+                self.spinner.hidden = YES;
                 [MBProgressHUD hideHUDForView:self.view animated:YES];
             });
         });
