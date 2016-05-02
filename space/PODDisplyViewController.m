@@ -16,10 +16,10 @@
 @property(strong, nonatomic) UIButton *saveImageButton;
 @property(strong, nonatomic) UILabel *imageTitle;
 @property(strong, nonatomic) UIActivityIndicatorView *spinner;
-@property(strong, nonatomic) UIImageView *backgroundImage;
+@property(strong, nonatomic) UIImage *backgroundImage;
 @property(strong, nonatomic) NSString *moreInfo;
 @property(strong, nonatomic) UIScrollView *scrollView;
-@property(strong, nonatomic) UIView *imageViewContainer;
+@property(strong, nonatomic) UIImageView *imageViewContainer;
 
 
 
@@ -30,20 +30,32 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.scrollView.delegate = self;
     self.view.backgroundColor = [UIColor blackColor];
-    UIFont *din = [UIFont fontWithName:@"DIN" size:20];
+    UIFont *normalDin = [UIFont fontWithName:@"DIN" size:20];
+    UIFont *smallDin = [UIFont fontWithName:@"DIN" size:15];
     
+    //add spinner for load screen
+    self.spinner = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+    [self.spinner startAnimating];
+    [self.view addSubview:self.spinner];
+    self.spinner.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.spinner.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor].active = YES;
+    [self.spinner.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor].active = YES;
+    self.spinner.hidden = NO;
+
     //make a scroll view
-    self.scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
-    self.scrollView.backgroundColor = [UIColor purpleColor];
-    [self.view addSubview:self.scrollView];
+    self.scrollView = [[UIScrollView alloc]initWithFrame:self.view.bounds];
+    self.scrollView.minimumZoomScale = .38;
+    self.scrollView.maximumZoomScale = 6;
+    self.scrollView.delegate = self;
+
     
     // make the back button
     self.backButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.backButton setTitle:@"Back" forState:UIControlStateNormal];
     [self.backButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    self.backButton.titleLabel.font = din;
+    [self.backButton addTarget:self action:@selector(backButtonTapped) forControlEvents:UIControlEventTouchUpInside];
+    self.backButton.titleLabel.font = normalDin;
     self.backButton.hidden = YES;
     [self.view addSubview:self.backButton];
     self.backButton.translatesAutoresizingMaskIntoConstraints = NO;
@@ -56,20 +68,24 @@
     self.imageTitle = [[UILabel alloc]init];
     self.imageTitle.textColor = [UIColor whiteColor];
     [self.view addSubview:self.imageTitle];
-    self.imageTitle.font = din;
+    self.imageTitle.font = normalDin;
     self.imageTitle.translatesAutoresizingMaskIntoConstraints = NO;
     [self.imageTitle.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor constant:-40].active = YES;
     [self.imageTitle.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor].active = YES;
+    self.imageTitle.hidden = YES;
     
-    //initialize background image before setting it in api get
-    self.imageViewContainer = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
-    [self.scrollView addSubview:self.imageViewContainer];
-
-   
-   
-//    self.imageTitle.hidden = YES;
-//    self.saveImageButton.hidden = YES;
-//    self.spinner.hidden = NO;
+    //make save image button
+    self.saveImageButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.saveImageButton setTitle:@"- Save Image -" forState:UIControlStateNormal];
+    [self.saveImageButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [self.saveImageButton addTarget:self action:@selector(saveImageButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+    self.saveImageButton.titleLabel.font = smallDin;
+    self.saveImageButton.hidden = YES;
+    [self.view addSubview:self.saveImageButton];
+    self.saveImageButton.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.saveImageButton.topAnchor constraintEqualToAnchor:self.imageTitle.bottomAnchor].active = YES;
+    [self.saveImageButton.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor].active = YES;
+    
     
     NasaApiClient *apiClient = [[NasaApiClient alloc]init];
     
@@ -86,21 +102,28 @@
             self.backButton.hidden = NO;
             self.imageTitle.hidden = NO;
             self.saveImageButton.hidden = NO;
-            self.backgroundImage.image = imageFromData;
-            self.imageViewContainer
+            self.backgroundImage = imageFromData;
+            self.scrollView.contentSize = CGSizeMake(imageFromData.size.width, imageFromData.size.height);
+            self.imageViewContainer = [[UIImageView alloc]initWithImage:imageFromData];
+            [self.scrollView addSubview:self.imageViewContainer];
             self.imageTitle.text = currentImage.imageTitle;
             self.moreInfo = currentImage.imageExplanation;
+            [self.view addSubview:self.scrollView];
+            [self.view sendSubviewToBack:self.scrollView];
         }];
     }];
     
     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(screenTapped:)];
     [self.view addGestureRecognizer:tapGestureRecognizer];
     
-//    UISwipeGestureRecognizer *swipeGestureRecognizer = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(swipedUp:)];
-//    [swipeGestureRecognizer setDirection:UISwipeGestureRecognizerDirectionUp];
-//    [self.view addGestureRecognizer:swipeGestureRecognizer];
-
+    
 }
+
+-(UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView{
+    
+    return self.imageViewContainer;
+}
+
 
 - (void)screenTapped:(UITapGestureRecognizer *)sender {
     NSLog(@"tapped");
@@ -121,7 +144,7 @@
 
 - (IBAction)saveImageButtonTapped:(id)sender {
     NSLog(@"save image been tapped");
-    UIImageWriteToSavedPhotosAlbum(self.backgroundImage.image, nil, nil, nil);
+    UIImageWriteToSavedPhotosAlbum(self.backgroundImage, nil, nil, nil);
     
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     hud.mode = MBProgressHUDModeAnnularDeterminate;
@@ -144,9 +167,16 @@
     
 }
 
+-(void)backButtonTapped{
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 -(BOOL)prefersStatusBarHidden{
     return YES;
 }
+
+
 
 
 @end

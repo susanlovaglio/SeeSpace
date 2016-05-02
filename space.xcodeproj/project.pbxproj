@@ -11,7 +11,6 @@
 		088F70F01CC2FDF7009EA30C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 088F70EF1CC2FDF7009EA30C /* AppDelegate.m */; };
 		088F71001CC2FE2E009EA30C /* AstronomyPOD.m in Sources */ = {isa = PBXBuildFile; fileRef = 088F70F21CC2FE2E009EA30C /* AstronomyPOD.m */; };
 		088F71011CC2FE2E009EA30C /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 088F70F41CC2FE2E009EA30C /* Constants.m */; };
-		088F71021CC2FE2E009EA30C /* DisplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 088F70F61CC2FE2E009EA30C /* DisplayViewController.m */; };
 		088F71031CC2FE2E009EA30C /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 088F70F81CC2FE2E009EA30C /* HomeViewController.m */; };
 		088F71041CC2FE2E009EA30C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 088F70F91CC2FE2E009EA30C /* main.m */; };
 		088F71061CC2FE2E009EA30C /* NasaApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 088F70FD1CC2FE2E009EA30C /* NasaApiClient.m */; };
@@ -36,8 +35,6 @@
 		088F70F21CC2FE2E009EA30C /* AstronomyPOD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AstronomyPOD.m; path = space/AstronomyPOD.m; sourceTree = SOURCE_ROOT; };
 		088F70F31CC2FE2E009EA30C /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = space/Constants.h; sourceTree = SOURCE_ROOT; };
 		088F70F41CC2FE2E009EA30C /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Constants.m; path = space/Constants.m; sourceTree = SOURCE_ROOT; };
-		088F70F51CC2FE2E009EA30C /* DisplayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DisplayViewController.h; path = space/DisplayViewController.h; sourceTree = SOURCE_ROOT; };
-		088F70F61CC2FE2E009EA30C /* DisplayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DisplayViewController.m; path = space/DisplayViewController.m; sourceTree = SOURCE_ROOT; };
 		088F70F71CC2FE2E009EA30C /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = space/HomeViewController.h; sourceTree = SOURCE_ROOT; };
 		088F70F81CC2FE2E009EA30C /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = space/HomeViewController.m; sourceTree = SOURCE_ROOT; };
 		088F70F91CC2FE2E009EA30C /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = space/main.m; sourceTree = SOURCE_ROOT; };
@@ -104,8 +101,6 @@
 				088F70FD1CC2FE2E009EA30C /* NasaApiClient.m */,
 				08ADAD3D1CD3D00C00F06C4A /* LaunchScreenViewController.h */,
 				08ADAD3E1CD3D00C00F06C4A /* LaunchScreenViewController.m */,
-				088F70F51CC2FE2E009EA30C /* DisplayViewController.h */,
-				088F70F61CC2FE2E009EA30C /* DisplayViewController.m */,
 				088F70F71CC2FE2E009EA30C /* HomeViewController.h */,
 				088F70F81CC2FE2E009EA30C /* HomeViewController.m */,
 				08ADAD3A1CD3CE1800F06C4A /* PODDisplyViewController.h */,
@@ -274,7 +269,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				088F71021CC2FE2E009EA30C /* DisplayViewController.m in Sources */,
 				08ADAD3C1CD3CE1800F06C4A /* PODDisplyViewController.m in Sources */,
 				088F71061CC2FE2E009EA30C /* NasaApiClient.m in Sources */,
 				088F70F01CC2FDF7009EA30C /* AppDelegate.m in Sources */,
