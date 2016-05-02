@@ -39,16 +39,6 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fu2-j2-jdZ">
-                                <rect key="frame" x="20" y="334" width="560" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="7Ii-b1-sKX"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="35"/>
-                                <state key="normal" title="mars">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7n5-Ol-OZG">
                                 <rect key="frame" x="199" y="463" width="203" height="50"/>
                                 <constraints>
@@ -65,11 +55,8 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Fu2-j2-jdZ" firstAttribute="top" secondItem="7n5-Ol-OZG" secondAttribute="bottom" id="7aG-Sa-oTm"/>
-                            <constraint firstItem="Fu2-j2-jdZ" firstAttribute="leading" secondItem="hF9-TS-zSK" secondAttribute="leading" constant="20" id="Ecd-AY-R2D"/>
                             <constraint firstItem="FxE-k6-In9" firstAttribute="centerY" secondItem="hF9-TS-zSK" secondAttribute="centerY" multiplier="50%" id="QE9-qK-a5H"/>
                             <constraint firstItem="FxE-k6-In9" firstAttribute="leading" secondItem="hF9-TS-zSK" secondAttribute="leadingMargin" id="QN5-aH-T6d"/>
-                            <constraint firstAttribute="trailing" secondItem="Fu2-j2-jdZ" secondAttribute="trailing" constant="20" id="TLt-4l-ZYi"/>
                             <constraint firstItem="7n5-Ol-OZG" firstAttribute="top" secondItem="FxE-k6-In9" secondAttribute="bottom" multiplier="2.2" constant="8" symbolic="YES" id="TUB-ql-VCZ"/>
                             <constraint firstItem="FxE-k6-In9" firstAttribute="top" secondItem="Uno-G1-m2J" secondAttribute="bottom" constant="20" id="Tig-nz-jGR"/>
                             <constraint firstItem="7NL-zg-lWl" firstAttribute="top" secondItem="Uno-G1-m2J" secondAttribute="bottom" id="U8e-ws-QI2"/>
@@ -77,13 +64,9 @@
                             <constraint firstItem="7NL-zg-lWl" firstAttribute="trailing" secondItem="hF9-TS-zSK" secondAttribute="trailing" id="ec2-1V-foI"/>
                             <constraint firstItem="7NL-zg-lWl" firstAttribute="leading" secondItem="hF9-TS-zSK" secondAttribute="leading" id="k9c-Le-31F"/>
                             <constraint firstItem="FxE-k6-In9" firstAttribute="trailing" secondItem="hF9-TS-zSK" secondAttribute="trailing" id="lEQ-sV-Zze"/>
-                            <constraint firstItem="7n5-Ol-OZG" firstAttribute="height" secondItem="Fu2-j2-jdZ" secondAttribute="height" id="qbL-Z6-ZBE"/>
                             <constraint firstItem="7NL-zg-lWl" firstAttribute="bottom" secondItem="fYq-UI-90o" secondAttribute="top" id="wbn-w2-SI9"/>
                         </constraints>
                         <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="Fu2-j2-jdZ"/>
-                            </mask>
                             <mask key="constraints">
                                 <exclude reference="Tig-nz-jGR"/>
                             </mask>
