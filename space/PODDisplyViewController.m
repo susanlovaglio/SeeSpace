@@ -10,6 +10,7 @@
 #import "MBProgressHUD.h"
 #import "NasaApiClient.h"
 #import "AstronomyPOD.h"
+#import <CoreMotion/CoreMotion.h>
 
 @interface PODDisplyViewController ()
 @property(strong, nonatomic) UIButton *backButton;//
@@ -20,8 +21,7 @@
 @property(strong, nonatomic) NSString *moreInfo;
 @property(strong, nonatomic) UIScrollView *scrollView;
 @property(strong, nonatomic) UIImageView *imageViewContainer;
-
-
+@property(strong, nonatomic) CMMotionManager *motionManager;
 
 @end
 
@@ -115,7 +115,44 @@
     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(screenTapped:)];
     [self.view addGestureRecognizer:tapGestureRecognizer];
     
+    //make a motion manager to start listening to callbacks
+    self.motionManager = [[CMMotionManager alloc]init];
+    [self.motionManager startDeviceMotionUpdatesToQueue:[NSOperationQueue mainQueue] withHandler:^(CMDeviceMotion *motion, NSError *error) {
+        CGFloat xRotationRate = motion.rotationRate.x;
+        CGFloat yRotationRate = motion.rotationRate.y;
+        CGFloat zRotationRate = motion.rotationRate.z;
+        
+        if (fabs(yRotationRate) > (fabs(xRotationRate) + fabs(zRotationRate))) {
+            
+            CGFloat rotationMultiplier = 5.0f;
+            CGFloat invertedYrotationRate = yRotationRate * -1;
+            
+            CGFloat zoomScale = (CGRectGetHeight(self.scrollView.bounds) / CGRectGetWidth(self.scrollView.bounds)) * (self.backgroundImage.size.width / self.backgroundImage.size.height);
+            CGFloat xOffset = self.scrollView.contentOffset.x + (invertedYrotationRate * zoomScale * rotationMultiplier);
+            CGPoint contentOffset = [self clampedContentOffsetForHorizontalOffset:xOffset];
+            
+            CGFloat movementSmoothing = .3f;
+            
+            [UIView animateWithDuration:movementSmoothing delay:0.0f options:UIViewAnimationOptionBeginFromCurrentState |
+                             UIViewAnimationOptionAllowUserInteraction |
+                             UIViewAnimationOptionCurveEaseOut animations:^{
+                                 [self.scrollView setContentOffset:contentOffset animated:NO];
+                             } completion:nil];
+        }
+    }];
     
+    
+}
+
+-(CGPoint)clampedContentOffsetForHorizontalOffset:(CGFloat)horizontalOffset{
+    
+    CGFloat maxXOffset = self.scrollView.contentSize.width - CGRectGetWidth(self.scrollView.bounds);
+    CGFloat minXOffset = 0.0f;
+    
+    CGFloat clampedXOffset = fmaxf(minXOffset, fmin(horizontalOffset, maxXOffset));
+    CGFloat centeredY = (self.scrollView.contentSize.height / 2.0f) - (CGRectGetHeight(self.scrollView.bounds))/ 2.0f;
+    
+    return CGPointMake(clampedXOffset, centeredY);
 }
 
 -(UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView{
