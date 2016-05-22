@@ -22,6 +22,7 @@
 @property(strong, nonatomic) UIScrollView *scrollView;
 @property(strong, nonatomic) UIImageView *imageViewContainer;
 @property(strong, nonatomic) CMMotionManager *motionManager;
+@property(strong, nonatomic) UIButton *enablePanButton;
 
 @end
 
@@ -85,7 +86,19 @@
     [self.saveImageButton.topAnchor constraintEqualToAnchor:self.imageTitle.bottomAnchor].active = YES;
     [self.saveImageButton.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor].active = YES;
     
-    
+    //make pan button
+    self.enablePanButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.enablePanButton setTitle:@"- Pan Photo -" forState:UIControlStateNormal];
+    [self.enablePanButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [self.enablePanButton addTarget:self action:@selector(enablePan) forControlEvents:UIControlEventTouchUpInside];
+    self.enablePanButton.titleLabel.font = smallDin;
+    self.enablePanButton.hidden = YES;
+    [self.view addSubview:self.enablePanButton];
+    self.enablePanButton.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.enablePanButton.bottomAnchor constraintEqualToAnchor:self.imageTitle.topAnchor].active = YES;
+    [self.enablePanButton.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor].active = YES;
+    [self.view bringSubviewToFront:self.enablePanButton];
+
     NasaApiClient *apiClient = [[NasaApiClient alloc]init];
     
     [apiClient imagesFromApiWithCompletionBlock:^(NSDictionary *imageDictionaries) {
@@ -101,6 +114,7 @@
             self.backButton.hidden = NO;
             self.imageTitle.hidden = NO;
             self.saveImageButton.hidden = NO;
+            self.enablePanButton.hidden = NO;
             self.backgroundImage = imageFromData;
             self.scrollView.contentSize = CGSizeMake(self.backgroundImage.size.width, self.backgroundImage.size.height);
             self.imageViewContainer = [[UIImageView alloc]initWithImage:self.backgroundImage];
@@ -116,6 +130,9 @@
     [self.view addGestureRecognizer:tapGestureRecognizer];
     
     //make a motion manager to start listening to callbacks
+    }
+
+-(void)enablePan{
     self.motionManager = [[CMMotionManager alloc]init];
     [self.motionManager startDeviceMotionUpdatesToQueue:[NSOperationQueue mainQueue] withHandler:^(CMDeviceMotion *motion, NSError *error) {
         CGFloat xRotationRate = motion.rotationRate.x;
@@ -134,14 +151,12 @@
             CGFloat movementSmoothing = .3f;
             
             [UIView animateWithDuration:movementSmoothing delay:0.0f options:UIViewAnimationOptionBeginFromCurrentState |
-                             UIViewAnimationOptionAllowUserInteraction |
-                             UIViewAnimationOptionCurveEaseOut animations:^{
-                                 [self.scrollView setContentOffset:contentOffset animated:NO];
-                             } completion:nil];
+             UIViewAnimationOptionAllowUserInteraction |
+             UIViewAnimationOptionCurveEaseOut animations:^{
+                 [self.scrollView setContentOffset:contentOffset animated:NO];
+             } completion:nil];
         }
     }];
-    
-    
 }
 
 -(CGPoint)clampedContentOffsetForHorizontalOffset:(CGFloat)horizontalOffset{
@@ -169,10 +184,12 @@
     if (self.backButton.hidden == NO) {
         self.backButton.hidden = YES;
         self.imageTitle.hidden = YES;
+        self.enablePanButton.hidden = YES;
         self.saveImageButton.hidden = YES;
     }else{
         self.backButton.hidden = NO;
         self.imageTitle.hidden = NO;
+        self.enablePanButton.hidden = NO;
         self.saveImageButton.hidden = NO;
     }
 }
