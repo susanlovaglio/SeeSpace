@@ -180,6 +180,7 @@
     [UIView transitionWithView:self.backButton duration:.5 options:UIViewAnimationOptionTransitionCrossDissolve animations:nil completion:nil];
     [UIView transitionWithView:self.imageTitle duration:.5 options:UIViewAnimationOptionTransitionCrossDissolve animations:nil completion:nil];
     [UIView transitionWithView:self.saveImageButton duration:.5 options:UIViewAnimationOptionTransitionCrossDissolve animations:nil completion:nil];
+    [UIView transitionWithView:self.enablePanButton duration:.5 options:UIViewAnimationOptionTransitionCrossDissolve animations:nil completion:nil];
     
     if (self.backButton.hidden == NO) {
         self.backButton.hidden = YES;
