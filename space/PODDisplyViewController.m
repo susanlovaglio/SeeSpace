@@ -123,18 +123,24 @@
             self.moreInfo = currentImage.imageExplanation;
             [self.view addSubview:self.scrollView];
             [self.view sendSubviewToBack:self.scrollView];
+            NSLog(@"%@",self.moreInfo);
         }];
     }];
-    
+
     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(screenTapped:)];
     [self.view addGestureRecognizer:tapGestureRecognizer];
     
     //make a motion manager to start listening to callbacks
+    
     }
 
 -(void)enablePan{
     self.motionManager = [[CMMotionManager alloc]init];
+    
     [self.motionManager startDeviceMotionUpdatesToQueue:[NSOperationQueue mainQueue] withHandler:^(CMDeviceMotion *motion, NSError *error) {
+        
+    
+        
         CGFloat xRotationRate = motion.rotationRate.x;
         CGFloat yRotationRate = motion.rotationRate.y;
         CGFloat zRotationRate = motion.rotationRate.z;

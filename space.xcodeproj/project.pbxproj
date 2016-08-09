@@ -21,10 +21,12 @@
 		08ADAD3C1CD3CE1800F06C4A /* PODDisplyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08ADAD3B1CD3CE1800F06C4A /* PODDisplyViewController.m */; };
 		08ADAD431CD3D28900F06C4A /* nasalization rg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08ADAD421CD3D28900F06C4A /* nasalization rg.ttf */; };
 		08ADAD451CD3E21F00F06C4A /* DIN-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 08ADAD441CD3E21F00F06C4A /* DIN-Light.otf */; };
-		F39A625BED3312FD3549D97B /* libPods-space.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CF1CA05D134C9D67B36EF17 /* libPods-space.a */; };
+		C766EAF125CD047108DE7845 /* libPods-space.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 040A92160D64BED52A59074B /* libPods-space.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		020F63D764F26A33BFCCE249 /* Pods-space.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-space.release.xcconfig"; path = "Pods/Target Support Files/Pods-space/Pods-space.release.xcconfig"; sourceTree = "<group>"; };
+		040A92160D64BED52A59074B /* libPods-space.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-space.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		083B89E61CC408BD00B3B794 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = SOURCE_ROOT; };
 		083B89E71CC408BD00B3B794 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = SOURCE_ROOT; };
 		085858BB1CAF497000517B74 /* space.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = space.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,9 +50,7 @@
 		08ADAD3B1CD3CE1800F06C4A /* PODDisplyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PODDisplyViewController.m; path = space/PODDisplyViewController.m; sourceTree = SOURCE_ROOT; };
 		08ADAD421CD3D28900F06C4A /* nasalization rg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "nasalization rg.ttf"; sourceTree = SOURCE_ROOT; };
 		08ADAD441CD3E21F00F06C4A /* DIN-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DIN-Light.otf"; sourceTree = SOURCE_ROOT; };
-		61EB50F4F024B73493C39BB0 /* Pods-space.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-space.release.xcconfig"; path = "Pods/Target Support Files/Pods-space/Pods-space.release.xcconfig"; sourceTree = "<group>"; };
-		7CF1CA05D134C9D67B36EF17 /* libPods-space.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-space.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D1C8748F53B93C04A33C705A /* Pods-space.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-space.debug.xcconfig"; path = "Pods/Target Support Files/Pods-space/Pods-space.debug.xcconfig"; sourceTree = "<group>"; };
+		F6444F56E82310AE53592C0D /* Pods-space.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-space.debug.xcconfig"; path = "Pods/Target Support Files/Pods-space/Pods-space.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +59,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08ADAD101CD0FE6F00F06C4A /* CoreMotion.framework in Frameworks */,
-				F39A625BED3312FD3549D97B /* libPods-space.a in Frameworks */,
+				C766EAF125CD047108DE7845 /* libPods-space.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,8 +71,8 @@
 			children = (
 				085858BD1CAF497000517B74 /* space */,
 				085858BC1CAF497000517B74 /* Products */,
-				347C0A4B10F429C0DB1C6AE2 /* Pods */,
 				9700437B676C006818FA0475 /* Frameworks */,
+				D2126854421F52879F9CCA7A /* Pods */,
 			);
 			sourceTree = "<group>";
 			usesTabs = 0;
@@ -122,22 +122,22 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		347C0A4B10F429C0DB1C6AE2 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				D1C8748F53B93C04A33C705A /* Pods-space.debug.xcconfig */,
-				61EB50F4F024B73493C39BB0 /* Pods-space.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		9700437B676C006818FA0475 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				08ADAD0F1CD0FE6F00F06C4A /* CoreMotion.framework */,
-				7CF1CA05D134C9D67B36EF17 /* libPods-space.a */,
+				040A92160D64BED52A59074B /* libPods-space.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D2126854421F52879F9CCA7A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F6444F56E82310AE53592C0D /* Pods-space.debug.xcconfig */,
+				020F63D764F26A33BFCCE249 /* Pods-space.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,12 +147,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 085858D21CAF497000517B74 /* Build configuration list for PBXNativeTarget "space" */;
 			buildPhases = (
-				AFCA7552912F0699FCBA30B7 /* Check Pods Manifest.lock */,
+				8E69B9617D088B9A77EC74A5 /* 📦 Check Pods Manifest.lock */,
 				085858B71CAF497000517B74 /* Sources */,
 				085858B81CAF497000517B74 /* Frameworks */,
 				085858B91CAF497000517B74 /* Resources */,
-				9884235C8D9CF608AD3C19D6 /* Embed Pods Frameworks */,
-				000CEC9C32C4A248E6F60371 /* Copy Pods Resources */,
+				61FCA41AE85386DF632226E7 /* 📦 Embed Pods Frameworks */,
+				7FABE2E902F452F2BB072B28 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -212,29 +212,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		000CEC9C32C4A248E6F60371 /* Copy Pods Resources */ = {
+		61FCA41AE85386DF632226E7 /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-space/Pods-space-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9884235C8D9CF608AD3C19D6 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
+			name = "📦 Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -242,14 +227,29 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-space/Pods-space-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AFCA7552912F0699FCBA30B7 /* Check Pods Manifest.lock */ = {
+		7FABE2E902F452F2BB072B28 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-space/Pods-space-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E69B9617D088B9A77EC74A5 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -379,11 +379,11 @@
 		};
 		085858D31CAF497000517B74 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D1C8748F53B93C04A33C705A /* Pods-space.debug.xcconfig */;
+			baseConfigurationReference = F6444F56E82310AE53592C0D /* Pods-space.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: susan lovaglio (86R482F629)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: susan lovaglio (86R482F629)";
 				INFOPLIST_FILE = space/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -395,11 +395,11 @@
 		};
 		085858D41CAF497000517B74 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 61EB50F4F024B73493C39BB0 /* Pods-space.release.xcconfig */;
+			baseConfigurationReference = 020F63D764F26A33BFCCE249 /* Pods-space.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: susan lovaglio (86R482F629)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: susan lovaglio (86R482F629)";
 				INFOPLIST_FILE = space/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
