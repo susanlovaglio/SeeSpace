@@ -10,6 +10,6 @@
 
 @interface NasaApiClient : NSObject
 
--(void)imagesFromApiWithCompletionBlock: (void (^)(NSDictionary *imageDictionaries))completionBlock;
++(void)imagesFromApiWithCompletionBlock: (void (^)(NSDictionary *imageDictionaries))completionBlock;
 
 @end

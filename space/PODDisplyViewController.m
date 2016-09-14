@@ -16,6 +16,7 @@
 @property(strong, nonatomic) UIButton *backButton;//
 @property(strong, nonatomic) UIButton *saveImageButton;
 @property(strong, nonatomic) UILabel *imageTitle;
+@property(strong, nonatomic) UILabel *NoInternetLabel;
 @property(strong, nonatomic) UIActivityIndicatorView *spinner;
 @property(strong, nonatomic) UIImage *backgroundImage;
 @property(strong, nonatomic) NSString *moreInfo;
@@ -99,10 +100,37 @@
     [self.enablePanButton.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor].active = YES;
     [self.view bringSubviewToFront:self.enablePanButton];
 
-    NasaApiClient *apiClient = [[NasaApiClient alloc]init];
+    //make the no internet label
+    self.NoInternetLabel = [[UILabel alloc]init];
+    self.NoInternetLabel.textColor = [UIColor whiteColor];
+//    self.NoInternetLabel.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:self.NoInternetLabel];
+    self.NoInternetLabel.font = normalDin;
+    self.NoInternetLabel.text = @"No Internet";
+    self.NoInternetLabel.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.NoInternetLabel.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor].active = YES;
+    [self.NoInternetLabel.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor].active = YES;
+    self.NoInternetLabel.hidden = YES;
     
-    [apiClient imagesFromApiWithCompletionBlock:^(NSDictionary *imageDictionaries) {
+    
+    [NasaApiClient imagesFromApiWithCompletionBlock:^(NSDictionary *imageDictionaries) {
         
+//        NSLog(@"%@", imageDictionaries);
+        
+        if (imageDictionaries == nil) {
+//            NSLog(@"true");
+            
+            [[NSOperationQueue mainQueue]addOperationWithBlock:^{
+                self.enablePanButton.hidden = YES;
+                self.saveImageButton.hidden = YES;
+                self.spinner.hidden = YES;
+                self.NoInternetLabel.hidden = NO;
+            }];
+            
+        }else{
+        
+//            NSLog(@"false");
+
         AstronomyPOD *currentImage = [AstronomyPOD imagesFromDictionary:imageDictionaries];
         
         NSData *imageData = [[NSData alloc] initWithContentsOfURL: currentImage.imageURL];
@@ -125,8 +153,9 @@
             [self.view sendSubviewToBack:self.scrollView];
             NSLog(@"%@",self.moreInfo);
         }];
+        }
     }];
-
+    
     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(screenTapped:)];
     [self.view addGestureRecognizer:tapGestureRecognizer];
     
