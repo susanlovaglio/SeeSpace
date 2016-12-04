@@ -42,13 +42,22 @@
                                 <size key="shadowOffset" width="0.0" height="-2"/>
                             </label>
                             <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7n5-Ol-OZG">
-                                <rect key="frame" x="86" y="502.5" width="203" height="66.5"/>
+                                <rect key="frame" x="86" y="503" width="203" height="66"/>
                                 <fontDescription key="fontDescription" name="DIN-Light" family="DIN" pointSize="35"/>
                                 <state key="normal" title="pic of the day">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="nNv-86-YDZ" kind="show" id="GLY-VA-4pc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u3g-hg-9fD">
+                                <rect key="frame" x="144" y="304" width="87" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="GLOBE"/>
+                                <connections>
+                                    <segue destination="Xmm-J4-e0d" kind="show" id="Uif-wZ-aJK"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -105,6 +114,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A9E-1K-E7H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1188" y="-87.706146926536732"/>
+        </scene>
+        <!--Globe View Controller-->
+        <scene sceneID="Eul-uB-fF0">
+            <objects>
+                <viewController id="Xmm-J4-e0d" customClass="GlobeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hOF-Zq-Ceg"/>
+                        <viewControllerLayoutGuide type="bottom" id="baz-iT-GWf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UTi-c4-pKg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" loops="NO" sceneName="globe8.dae" autoenablesDefaultLighting="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2OR-aQ-ZhZ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </sceneKitView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="baz-iT-GWf" firstAttribute="top" secondItem="2OR-aQ-ZhZ" secondAttribute="bottom" id="CsW-tZ-Xhh"/>
+                            <constraint firstItem="2OR-aQ-ZhZ" firstAttribute="leading" secondItem="UTi-c4-pKg" secondAttribute="leading" id="KLP-Lw-ri3"/>
+                            <constraint firstAttribute="trailing" secondItem="2OR-aQ-ZhZ" secondAttribute="trailing" id="p5Z-Xb-b8h"/>
+                            <constraint firstItem="2OR-aQ-ZhZ" firstAttribute="top" secondItem="hOF-Zq-Ceg" secondAttribute="bottom" id="xvt-Eh-5UH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="globeScene" destination="2OR-aQ-ZhZ" id="SeG-uq-Ahe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZV2-vP-EhA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2068" y="-88.605697151424295"/>
         </scene>
         <!--Disply View Controller-->
         <scene sceneID="Xoa-dH-yQc">

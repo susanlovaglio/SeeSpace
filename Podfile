@@ -4,8 +4,8 @@
 # use_frameworks!
 
 target 'space' do
+inherit! :search_paths
 
 pod 'Masonry'
 
 end
-

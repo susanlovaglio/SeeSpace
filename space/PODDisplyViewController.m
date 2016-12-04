@@ -14,7 +14,7 @@
 
 @interface PODDisplyViewController ()
 
-@property(strong, nonatomic) UIButton *backButton;//
+@property(strong, nonatomic) UIButton *backButton;
 @property(strong, nonatomic) UIButton *saveImageButton;
 @property(strong, nonatomic) UILabel *imageTitle;
 @property(strong, nonatomic) UILabel *NoInternetLabel;
