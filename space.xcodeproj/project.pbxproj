@@ -21,11 +21,12 @@
 		08ADAD3C1CD3CE1800F06C4A /* PODDisplyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08ADAD3B1CD3CE1800F06C4A /* PODDisplyViewController.m */; };
 		08ADAD431CD3D28900F06C4A /* nasalization rg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08ADAD421CD3D28900F06C4A /* nasalization rg.ttf */; };
 		08ADAD451CD3E21F00F06C4A /* DIN-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 08ADAD441CD3E21F00F06C4A /* DIN-Light.otf */; };
+		3D2E04AB1DF4A6820092C45D /* stars.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3D2E04AA1DF4A6820092C45D /* stars.jpg */; };
+		3D2E04AF1DF4AF760092C45D /* ColorMap.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3D2E04AE1DF4AF760092C45D /* ColorMap.jpg */; };
 		3DC6484E1DF3BF4200ED49CB /* SusanTest4.dae in Resources */ = {isa = PBXBuildFile; fileRef = 3DC6484D1DF3BF4200ED49CB /* SusanTest4.dae */; };
 		3DC648511DF3C22F00ED49CB /* GlobeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC648501DF3C22F00ED49CB /* GlobeViewController.m */; };
 		3DC648531DF3C33500ED49CB /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC648521DF3C33500ED49CB /* SceneKit.framework */; };
 		3DC648551DF3CC2F00ED49CB /* ModelIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC648541DF3CC2F00ED49CB /* ModelIO.framework */; };
-		3DC648591DF3DA1E00ED49CB /* ColorMap.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3DC648581DF3DA1E00ED49CB /* ColorMap.jpg */; };
 		3DC6485C1DF3E1CC00ED49CB /* globe8.dae in Resources */ = {isa = PBXBuildFile; fileRef = 3DC6485B1DF3E1CC00ED49CB /* globe8.dae */; };
 		C766EAF125CD047108DE7845 /* libPods-space.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 040A92160D64BED52A59074B /* libPods-space.a */; };
 /* End PBXBuildFile section */
@@ -56,12 +57,13 @@
 		08ADAD3B1CD3CE1800F06C4A /* PODDisplyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PODDisplyViewController.m; path = space/PODDisplyViewController.m; sourceTree = SOURCE_ROOT; };
 		08ADAD421CD3D28900F06C4A /* nasalization rg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "nasalization rg.ttf"; sourceTree = SOURCE_ROOT; };
 		08ADAD441CD3E21F00F06C4A /* DIN-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DIN-Light.otf"; sourceTree = SOURCE_ROOT; };
+		3D2E04AA1DF4A6820092C45D /* stars.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = stars.jpg; path = space/stars.jpg; sourceTree = SOURCE_ROOT; };
+		3D2E04AE1DF4AF760092C45D /* ColorMap.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = ColorMap.jpg; path = space/ColorMap.jpg; sourceTree = SOURCE_ROOT; };
 		3DC6484D1DF3BF4200ED49CB /* SusanTest4.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; name = SusanTest4.dae; path = space/SusanTest4.dae; sourceTree = SOURCE_ROOT; };
 		3DC6484F1DF3C22F00ED49CB /* GlobeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GlobeViewController.h; path = space/GlobeViewController.h; sourceTree = SOURCE_ROOT; };
 		3DC648501DF3C22F00ED49CB /* GlobeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GlobeViewController.m; path = space/GlobeViewController.m; sourceTree = SOURCE_ROOT; };
 		3DC648521DF3C33500ED49CB /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
 		3DC648541DF3CC2F00ED49CB /* ModelIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ModelIO.framework; path = System/Library/Frameworks/ModelIO.framework; sourceTree = SDKROOT; };
-		3DC648581DF3DA1E00ED49CB /* ColorMap.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = ColorMap.jpg; path = space/ColorMap.jpg; sourceTree = SOURCE_ROOT; };
 		3DC6485B1DF3E1CC00ED49CB /* globe8.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; name = globe8.dae; path = space/globe8.dae; sourceTree = SOURCE_ROOT; };
 		F6444F56E82310AE53592C0D /* Pods-space.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-space.debug.xcconfig"; path = "Pods/Target Support Files/Pods-space/Pods-space.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -117,12 +119,13 @@
 				08ADAD3B1CD3CE1800F06C4A /* PODDisplyViewController.m */,
 				3DC6484F1DF3C22F00ED49CB /* GlobeViewController.h */,
 				3DC648501DF3C22F00ED49CB /* GlobeViewController.m */,
+				3D2E04AA1DF4A6820092C45D /* stars.jpg */,
 				3DC6484D1DF3BF4200ED49CB /* SusanTest4.dae */,
 				3DC6485B1DF3E1CC00ED49CB /* globe8.dae */,
+				3D2E04AE1DF4AF760092C45D /* ColorMap.jpg */,
 				088F710C1CC2FF57009EA30C /* LaunchScreen.storyboard */,
 				088F710E1CC2FF57009EA30C /* Main.storyboard */,
 				088F71081CC2FE72009EA30C /* Assets.xcassets */,
-				3DC648581DF3DA1E00ED49CB /* ColorMap.jpg */,
 				088F710A1CC2FEBA009EA30C /* Info.plist */,
 				085858BE1CAF497000517B74 /* Supporting Files */,
 			);
@@ -225,8 +228,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				08ADAD451CD3E21F00F06C4A /* DIN-Light.otf in Resources */,
-				3DC648591DF3DA1E00ED49CB /* ColorMap.jpg in Resources */,
+				3D2E04AF1DF4AF760092C45D /* ColorMap.jpg in Resources */,
 				088F71101CC2FF57009EA30C /* LaunchScreen.storyboard in Resources */,
+				3D2E04AB1DF4A6820092C45D /* stars.jpg in Resources */,
 				3DC6485C1DF3E1CC00ED49CB /* globe8.dae in Resources */,
 				08ADAD431CD3D28900F06C4A /* nasalization rg.ttf in Resources */,
 				088F71091CC2FE72009EA30C /* Assets.xcassets in Resources */,
@@ -412,7 +416,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: susan lovaglio (86R482F629)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = space/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.susan.space;
 				PRODUCT_NAME = space;
@@ -428,7 +432,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: susan lovaglio (86R482F629)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = space/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.susan.space;
 				PRODUCT_NAME = space;

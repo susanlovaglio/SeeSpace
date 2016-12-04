@@ -52,6 +52,7 @@
 
     self.globeScene.autoenablesDefaultLighting = YES;
     self.globeScene.allowsCameraControl = YES;
+//    self.globeScene.scene.rootNode.camera.focalSize
 }
 
 //-(void)nodeSetUp{

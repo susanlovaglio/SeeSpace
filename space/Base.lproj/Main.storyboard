@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -65,46 +64,18 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="FxE-k6-In9" firstAttribute="top" secondItem="Uno-G1-m2J" secondAttribute="bottom" multiplier="50%" id="7s8-E2-oXb"/>
+                            <constraint firstItem="7NL-zg-lWl" firstAttribute="centerY" secondItem="hF9-TS-zSK" secondAttribute="centerY" id="9lW-bb-WDD"/>
                             <constraint firstItem="FxE-k6-In9" firstAttribute="height" secondItem="hF9-TS-zSK" secondAttribute="height" multiplier="10%" id="AkW-wi-JQy"/>
-                            <constraint firstItem="FxE-k6-In9" firstAttribute="top" secondItem="Uno-G1-m2J" secondAttribute="bottom" multiplier="3" id="JxV-fB-KY4"/>
-                            <constraint firstItem="7NL-zg-lWl" firstAttribute="top" secondItem="Uno-G1-m2J" secondAttribute="bottom" id="PCh-wC-PAu"/>
-                            <constraint firstItem="FxE-k6-In9" firstAttribute="centerY" secondItem="hF9-TS-zSK" secondAttribute="centerY" multiplier="50%" id="QE9-qK-a5H"/>
-                            <constraint firstItem="FxE-k6-In9" firstAttribute="leading" secondItem="hF9-TS-zSK" secondAttribute="leadingMargin" id="QN5-aH-T6d"/>
-                            <constraint firstItem="7n5-Ol-OZG" firstAttribute="top" secondItem="FxE-k6-In9" secondAttribute="bottom" multiplier="2.2" constant="8" symbolic="YES" id="TUB-ql-VCZ"/>
-                            <constraint firstItem="FxE-k6-In9" firstAttribute="top" secondItem="Uno-G1-m2J" secondAttribute="bottom" constant="20" id="Tig-nz-jGR"/>
-                            <constraint firstItem="7NL-zg-lWl" firstAttribute="top" secondItem="Uno-G1-m2J" secondAttribute="bottom" id="U8e-ws-QI2"/>
-                            <constraint firstItem="7n5-Ol-OZG" firstAttribute="centerX" secondItem="7NL-zg-lWl" secondAttribute="centerX" id="UZS-io-Ndo"/>
-                            <constraint firstItem="7NL-zg-lWl" firstAttribute="trailing" secondItem="hF9-TS-zSK" secondAttribute="trailing" id="YAD-v7-jOf"/>
+                            <constraint firstItem="7NL-zg-lWl" firstAttribute="height" secondItem="hF9-TS-zSK" secondAttribute="height" id="PBH-QI-Dfc"/>
+                            <constraint firstItem="7NL-zg-lWl" firstAttribute="centerX" secondItem="hF9-TS-zSK" secondAttribute="centerX" id="S9X-o8-v5U"/>
                             <constraint firstItem="7n5-Ol-OZG" firstAttribute="centerX" secondItem="FxE-k6-In9" secondAttribute="centerX" id="YLo-ho-CqE"/>
                             <constraint firstItem="7n5-Ol-OZG" firstAttribute="top" secondItem="FxE-k6-In9" secondAttribute="bottom" multiplier="2.5" id="cEl-b2-lAz"/>
                             <constraint firstItem="FxE-k6-In9" firstAttribute="trailing" secondItem="hF9-TS-zSK" secondAttribute="trailing" id="cMm-Tf-g4I"/>
                             <constraint firstItem="7n5-Ol-OZG" firstAttribute="height" secondItem="hF9-TS-zSK" secondAttribute="height" multiplier="10%" id="cdV-oW-now"/>
                             <constraint firstItem="FxE-k6-In9" firstAttribute="leading" secondItem="hF9-TS-zSK" secondAttribute="leading" id="dNz-C9-AZN"/>
-                            <constraint firstItem="7NL-zg-lWl" firstAttribute="trailing" secondItem="hF9-TS-zSK" secondAttribute="trailing" id="ec2-1V-foI"/>
-                            <constraint firstItem="7NL-zg-lWl" firstAttribute="leading" secondItem="hF9-TS-zSK" secondAttribute="leading" id="k9c-Le-31F"/>
-                            <constraint firstItem="FxE-k6-In9" firstAttribute="trailing" secondItem="hF9-TS-zSK" secondAttribute="trailing" id="lEQ-sV-Zze"/>
-                            <constraint firstItem="7NL-zg-lWl" firstAttribute="bottom" secondItem="fYq-UI-90o" secondAttribute="top" id="pGZ-yj-Yay"/>
-                            <constraint firstItem="7NL-zg-lWl" firstAttribute="bottom" secondItem="fYq-UI-90o" secondAttribute="top" id="wbn-w2-SI9"/>
-                            <constraint firstItem="7NL-zg-lWl" firstAttribute="leading" secondItem="hF9-TS-zSK" secondAttribute="leading" id="x19-DI-A6e"/>
+                            <constraint firstItem="7NL-zg-lWl" firstAttribute="width" secondItem="hF9-TS-zSK" secondAttribute="width" id="dYy-bf-bht"/>
                             <constraint firstItem="FxE-k6-In9" firstAttribute="centerY" secondItem="hF9-TS-zSK" secondAttribute="centerY" multiplier="50%" id="xqd-cZ-VRn"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="U8e-ws-QI2"/>
-                                <exclude reference="ec2-1V-foI"/>
-                                <exclude reference="k9c-Le-31F"/>
-                                <exclude reference="wbn-w2-SI9"/>
-                                <exclude reference="7s8-E2-oXb"/>
-                                <exclude reference="JxV-fB-KY4"/>
-                                <exclude reference="QE9-qK-a5H"/>
-                                <exclude reference="QN5-aH-T6d"/>
-                                <exclude reference="Tig-nz-jGR"/>
-                                <exclude reference="lEQ-sV-Zze"/>
-                                <exclude reference="TUB-ql-VCZ"/>
-                                <exclude reference="UZS-io-Ndo"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="ik6-mw-EfL"/>
                     <nil key="simulatedStatusBarMetrics"/>
@@ -129,17 +100,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" loops="NO" sceneName="globe8.dae" autoenablesDefaultLighting="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2OR-aQ-ZhZ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stars.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="RZy-5N-zqr" userLabel="stars">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <sceneKitView multipleTouchEnabled="YES" contentMode="scaleAspectFill" loops="NO" sceneName="globe8.dae" autoenablesDefaultLighting="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2OR-aQ-ZhZ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </sceneKitView>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="baz-iT-GWf" firstAttribute="top" secondItem="2OR-aQ-ZhZ" secondAttribute="bottom" id="CsW-tZ-Xhh"/>
-                            <constraint firstItem="2OR-aQ-ZhZ" firstAttribute="leading" secondItem="UTi-c4-pKg" secondAttribute="leading" id="KLP-Lw-ri3"/>
-                            <constraint firstAttribute="trailing" secondItem="2OR-aQ-ZhZ" secondAttribute="trailing" id="p5Z-Xb-b8h"/>
-                            <constraint firstItem="2OR-aQ-ZhZ" firstAttribute="top" secondItem="hOF-Zq-Ceg" secondAttribute="bottom" id="xvt-Eh-5UH"/>
+                            <constraint firstItem="2OR-aQ-ZhZ" firstAttribute="centerX" secondItem="UTi-c4-pKg" secondAttribute="centerX" id="Alv-6a-sCr"/>
+                            <constraint firstItem="2OR-aQ-ZhZ" firstAttribute="height" secondItem="UTi-c4-pKg" secondAttribute="height" id="Nu3-bZ-3kR"/>
+                            <constraint firstItem="2OR-aQ-ZhZ" firstAttribute="width" secondItem="UTi-c4-pKg" secondAttribute="width" id="ViS-8V-ica"/>
+                            <constraint firstItem="RZy-5N-zqr" firstAttribute="centerX" secondItem="UTi-c4-pKg" secondAttribute="centerX" id="dxq-qh-h8W"/>
+                            <constraint firstItem="RZy-5N-zqr" firstAttribute="width" secondItem="UTi-c4-pKg" secondAttribute="width" id="kGC-zA-IDb"/>
+                            <constraint firstItem="2OR-aQ-ZhZ" firstAttribute="centerY" secondItem="UTi-c4-pKg" secondAttribute="centerY" id="qdS-F0-KW0"/>
+                            <constraint firstItem="RZy-5N-zqr" firstAttribute="height" secondItem="UTi-c4-pKg" secondAttribute="height" id="taL-Sh-lxA"/>
+                            <constraint firstItem="RZy-5N-zqr" firstAttribute="centerY" secondItem="UTi-c4-pKg" secondAttribute="centerY" id="zlh-RE-YZM"/>
                         </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
@@ -175,5 +152,6 @@
     </scenes>
     <resources>
         <image name="space-stars-road" width="854" height="534"/>
+        <image name="stars.jpg" width="1280" height="1280"/>
     </resources>
 </document>
