@@ -26,7 +26,7 @@
     
     [self sceneSetUp];
 //    [self addBackButton];
-//    [self nodeSetUp];
+    [self nodeSetUp];
 
 }
 
@@ -52,17 +52,18 @@
 
     self.globeScene.autoenablesDefaultLighting = YES;
     self.globeScene.allowsCameraControl = YES;
-//    self.globeScene.scene.rootNode.camera.focalSize
 }
 
-//-(void)nodeSetUp{
+-(void)nodeSetUp{
 
+    SCNNode *figureNode = self.globeScene.scene.rootNode.childNodes[0];
+    figureNode.scale = SCNVector3Make(0.6, 0.6, 0.6);
 //    SCNNode *figureNode = self.globeScene.scene.rootNode;
 //    SCNMaterial *texture = [SCNMaterial material];
 //    texture.diffuse.contents = [UIImage imageNamed: @"ColorMap.jpg"];
 //    figureNode.geometry.firstMaterial = texture;
     
-//}
+}
 
 //-(void)addBackButton{
 //    
