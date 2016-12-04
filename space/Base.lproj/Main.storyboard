@@ -52,10 +52,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u3g-hg-9fD">
-                                <rect key="frame" x="144" y="304" width="87" height="59"/>
+                                <rect key="frame" x="144" y="594" width="145" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="GLOBE"/>
+                                <fontDescription key="fontDescription" name="DIN-Light" family="DIN" pointSize="35"/>
+                                <state key="normal" title="globe">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="Xmm-J4-e0d" kind="show" id="Uif-wZ-aJK"/>
                                 </connections>
@@ -140,6 +142,8 @@
                             <constraint firstItem="2OR-aQ-ZhZ" firstAttribute="top" secondItem="hOF-Zq-Ceg" secondAttribute="bottom" id="xvt-Eh-5UH"/>
                         </constraints>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="globeScene" destination="2OR-aQ-ZhZ" id="SeG-uq-Ahe"/>
                     </connections>
@@ -161,6 +165,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vpa-AR-qWB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

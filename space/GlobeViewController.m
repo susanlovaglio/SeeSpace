@@ -25,8 +25,8 @@
     // Do any additional setup after loading the view.
     
     [self sceneSetUp];
-    [self addBackButton];
-    [self nodeSetUp];
+//    [self addBackButton];
+//    [self nodeSetUp];
 
 }
 
@@ -35,18 +35,18 @@
     // Dispose of any resources that can be recreated.
 }
 
--(UIStatusBarStyle)preferredStatusBarStyle{
+//-(UIStatusBarStyle)preferredStatusBarStyle{
     
-    return UIStatusBarStyleLightContent;
-}
+  //  return UIStatusBarStyleLightContent;
+//}
 
--(void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator{
-    
-    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
-    
-    [self.globeScene stop:nil];
-    [self.globeScene play:nil];
-}
+//-(void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator{
+//    
+//    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
+//    
+//    [self.globeScene stop:nil];
+//    [self.globeScene play:nil];
+//}
 
 -(void)sceneSetUp{
 
@@ -54,37 +54,37 @@
     self.globeScene.allowsCameraControl = YES;
 }
 
--(void)nodeSetUp{
-    
-    SCNNode *figureNode = self.globeScene.scene.rootNode;
-    SCNMaterial *texture = [SCNMaterial material];
-    texture.diffuse.contents = [UIImage imageNamed: @"ColorMap.jpg"];
-    figureNode.geometry.firstMaterial = texture;
-    
-}
+//-(void)nodeSetUp{
 
--(void)addBackButton{
+//    SCNNode *figureNode = self.globeScene.scene.rootNode;
+//    SCNMaterial *texture = [SCNMaterial material];
+//    texture.diffuse.contents = [UIImage imageNamed: @"ColorMap.jpg"];
+//    figureNode.geometry.firstMaterial = texture;
     
-    UIFont *normalDin = [UIFont fontWithName:@"DIN" size:20];
-    
-    self.backButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [self.backButton setTitle:@"Back" forState:UIControlStateNormal];
-    [self.backButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [self.backButton addTarget:self action:@selector(backButtonTapped) forControlEvents:UIControlEventTouchUpInside];
-    self.backButton.titleLabel.font = normalDin;
-    self.backButton.hidden = YES;
-    [self.globeScene addSubview:self.backButton];
-    self.backButton.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.backButton.leadingAnchor constraintEqualToAnchor:self.globeScene.leadingAnchor].active = YES;
-    [self.backButton.topAnchor constraintEqualToAnchor:self.globeScene.topAnchor].active = YES;
-    [self.backButton.heightAnchor constraintEqualToConstant:50].active = YES;
-    [self.backButton.widthAnchor constraintEqualToConstant:100].active = YES;
-}
+//}
 
--(void)backButtonTapped{
-    
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
+//-(void)addBackButton{
+//    
+//    UIFont *normalDin = [UIFont fontWithName:@"DIN" size:20];
+//    
+//    self.backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+//    [self.backButton setTitle:@"Back" forState:UIControlStateNormal];
+//    [self.backButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+//    [self.backButton addTarget:self action:@selector(backButtonTapped) forControlEvents:UIControlEventTouchUpInside];
+//    self.backButton.titleLabel.font = normalDin;
+//    self.backButton.hidden = YES;
+//    [self.globeScene addSubview:self.backButton];
+//    self.backButton.translatesAutoresizingMaskIntoConstraints = NO;
+//    [self.backButton.leadingAnchor constraintEqualToAnchor:self.globeScene.leadingAnchor].active = YES;
+//    [self.backButton.topAnchor constraintEqualToAnchor:self.globeScene.topAnchor].active = YES;
+//    [self.backButton.heightAnchor constraintEqualToConstant:50].active = YES;
+//    [self.backButton.widthAnchor constraintEqualToConstant:100].active = YES;
+//}
+//
+//-(void)backButtonTapped{
+//    
+//    [self dismissViewControllerAnimated:YES completion:nil];
+//}
 /*
 #pragma mark - Navigation
 
