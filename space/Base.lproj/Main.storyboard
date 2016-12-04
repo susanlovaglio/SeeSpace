@@ -31,24 +31,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="space-stars-road" translatesAutoresizingMaskIntoConstraints="NO" id="7NL-zg-lWl">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="space-stars-road" translatesAutoresizingMaskIntoConstraints="NO" id="7NL-zg-lWl">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="SEESPACE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FxE-k6-In9">
-                                <rect key="frame" x="20" y="94" width="580" height="113"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="113" id="pRd-mr-CSv"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="NasalizationRg-Regular" family="Nasalization" pointSize="71"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SEESPACE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FxE-k6-In9">
+                                <rect key="frame" x="0.0" y="134" width="375" height="67"/>
+                                <fontDescription key="fontDescription" name="NasalizationRg-Regular" family="Nasalization" pointSize="59"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="-2"/>
                             </label>
-                            <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7n5-Ol-OZG">
-                                <rect key="frame" x="199" y="463" width="203" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="UaC-aq-02y"/>
-                                </constraints>
+                            <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7n5-Ol-OZG">
+                                <rect key="frame" x="86" y="502.5" width="203" height="66.5"/>
                                 <fontDescription key="fontDescription" name="DIN-Light" family="DIN" pointSize="35"/>
                                 <state key="normal" title="pic of the day">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -60,20 +54,44 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="FxE-k6-In9" firstAttribute="top" secondItem="Uno-G1-m2J" secondAttribute="bottom" multiplier="50%" id="7s8-E2-oXb"/>
+                            <constraint firstItem="FxE-k6-In9" firstAttribute="height" secondItem="hF9-TS-zSK" secondAttribute="height" multiplier="10%" id="AkW-wi-JQy"/>
+                            <constraint firstItem="FxE-k6-In9" firstAttribute="top" secondItem="Uno-G1-m2J" secondAttribute="bottom" multiplier="3" id="JxV-fB-KY4"/>
+                            <constraint firstItem="7NL-zg-lWl" firstAttribute="top" secondItem="Uno-G1-m2J" secondAttribute="bottom" id="PCh-wC-PAu"/>
                             <constraint firstItem="FxE-k6-In9" firstAttribute="centerY" secondItem="hF9-TS-zSK" secondAttribute="centerY" multiplier="50%" id="QE9-qK-a5H"/>
                             <constraint firstItem="FxE-k6-In9" firstAttribute="leading" secondItem="hF9-TS-zSK" secondAttribute="leadingMargin" id="QN5-aH-T6d"/>
                             <constraint firstItem="7n5-Ol-OZG" firstAttribute="top" secondItem="FxE-k6-In9" secondAttribute="bottom" multiplier="2.2" constant="8" symbolic="YES" id="TUB-ql-VCZ"/>
                             <constraint firstItem="FxE-k6-In9" firstAttribute="top" secondItem="Uno-G1-m2J" secondAttribute="bottom" constant="20" id="Tig-nz-jGR"/>
                             <constraint firstItem="7NL-zg-lWl" firstAttribute="top" secondItem="Uno-G1-m2J" secondAttribute="bottom" id="U8e-ws-QI2"/>
                             <constraint firstItem="7n5-Ol-OZG" firstAttribute="centerX" secondItem="7NL-zg-lWl" secondAttribute="centerX" id="UZS-io-Ndo"/>
+                            <constraint firstItem="7NL-zg-lWl" firstAttribute="trailing" secondItem="hF9-TS-zSK" secondAttribute="trailing" id="YAD-v7-jOf"/>
+                            <constraint firstItem="7n5-Ol-OZG" firstAttribute="centerX" secondItem="FxE-k6-In9" secondAttribute="centerX" id="YLo-ho-CqE"/>
+                            <constraint firstItem="7n5-Ol-OZG" firstAttribute="top" secondItem="FxE-k6-In9" secondAttribute="bottom" multiplier="2.5" id="cEl-b2-lAz"/>
+                            <constraint firstItem="FxE-k6-In9" firstAttribute="trailing" secondItem="hF9-TS-zSK" secondAttribute="trailing" id="cMm-Tf-g4I"/>
+                            <constraint firstItem="7n5-Ol-OZG" firstAttribute="height" secondItem="hF9-TS-zSK" secondAttribute="height" multiplier="10%" id="cdV-oW-now"/>
+                            <constraint firstItem="FxE-k6-In9" firstAttribute="leading" secondItem="hF9-TS-zSK" secondAttribute="leading" id="dNz-C9-AZN"/>
                             <constraint firstItem="7NL-zg-lWl" firstAttribute="trailing" secondItem="hF9-TS-zSK" secondAttribute="trailing" id="ec2-1V-foI"/>
                             <constraint firstItem="7NL-zg-lWl" firstAttribute="leading" secondItem="hF9-TS-zSK" secondAttribute="leading" id="k9c-Le-31F"/>
                             <constraint firstItem="FxE-k6-In9" firstAttribute="trailing" secondItem="hF9-TS-zSK" secondAttribute="trailing" id="lEQ-sV-Zze"/>
+                            <constraint firstItem="7NL-zg-lWl" firstAttribute="bottom" secondItem="fYq-UI-90o" secondAttribute="top" id="pGZ-yj-Yay"/>
                             <constraint firstItem="7NL-zg-lWl" firstAttribute="bottom" secondItem="fYq-UI-90o" secondAttribute="top" id="wbn-w2-SI9"/>
+                            <constraint firstItem="7NL-zg-lWl" firstAttribute="leading" secondItem="hF9-TS-zSK" secondAttribute="leading" id="x19-DI-A6e"/>
+                            <constraint firstItem="FxE-k6-In9" firstAttribute="centerY" secondItem="hF9-TS-zSK" secondAttribute="centerY" multiplier="50%" id="xqd-cZ-VRn"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="U8e-ws-QI2"/>
+                                <exclude reference="ec2-1V-foI"/>
+                                <exclude reference="k9c-Le-31F"/>
+                                <exclude reference="wbn-w2-SI9"/>
+                                <exclude reference="7s8-E2-oXb"/>
+                                <exclude reference="JxV-fB-KY4"/>
+                                <exclude reference="QE9-qK-a5H"/>
+                                <exclude reference="QN5-aH-T6d"/>
                                 <exclude reference="Tig-nz-jGR"/>
+                                <exclude reference="lEQ-sV-Zze"/>
+                                <exclude reference="TUB-ql-VCZ"/>
+                                <exclude reference="UZS-io-Ndo"/>
                             </mask>
                         </variation>
                     </view>
@@ -86,7 +104,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A9E-1K-E7H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1188" y="-87"/>
+            <point key="canvasLocation" x="1188" y="-87.706146926536732"/>
         </scene>
         <!--Disply View Controller-->
         <scene sceneID="Xoa-dH-yQc">
