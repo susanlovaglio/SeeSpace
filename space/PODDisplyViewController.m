@@ -13,6 +13,7 @@
 #import <CoreMotion/CoreMotion.h>
 
 @interface PODDisplyViewController ()
+
 @property(strong, nonatomic) UIButton *backButton;//
 @property(strong, nonatomic) UIButton *saveImageButton;
 @property(strong, nonatomic) UILabel *imageTitle;
@@ -47,7 +48,11 @@
 
     //make a scroll view
     self.scrollView = [[UIScrollView alloc]initWithFrame:self.view.bounds];
-    self.scrollView.minimumZoomScale = .36;
+    
+//    self.scrollView.minimumZoomScale = .60;
+
+
+    
     self.scrollView.maximumZoomScale = 6;
     self.scrollView.delegate = self;
     
@@ -144,8 +149,12 @@
             self.saveImageButton.hidden = NO;
             self.enablePanButton.hidden = NO;
             self.backgroundImage = imageFromData;
+            
             self.scrollView.contentSize = CGSizeMake(self.backgroundImage.size.width, self.backgroundImage.size.height);
             self.imageViewContainer = [[UIImageView alloc]initWithImage:self.backgroundImage];
+            
+            self.scrollView.minimumZoomScale = self.view.frame.size.height / self.imageViewContainer.frame.size.height;
+            
             [self.scrollView addSubview:self.imageViewContainer];
             self.imageTitle.text = currentImage.imageTitle;
             self.moreInfo = currentImage.imageExplanation;
@@ -206,7 +215,7 @@
 }
 
 -(UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView{
-    
+
     return self.imageViewContainer;
 }
 
@@ -242,13 +251,13 @@
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
         // Do something...
-        dispatch_async(dispatch_get_main_queue(), ^{
-            
+//        dispatch_async(dispatch_get_main_queue(), ^{
+        
             dispatch_async(dispatch_get_main_queue(), ^{
                 self.spinner.hidden = YES;
                 [MBProgressHUD hideHUDForView:self.view animated:YES];
             });
-        });
+//        });
     });
     
     [UIView transitionWithView:hud duration:.8 options:UIViewAnimationOptionTransitionCrossDissolve animations:nil completion:^(BOOL finished) {
