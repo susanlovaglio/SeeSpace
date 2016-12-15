@@ -1,11 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Jf7-eQ-mya">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Jf7-eQ-mya">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -30,11 +27,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="space-stars-road" translatesAutoresizingMaskIntoConstraints="NO" id="7NL-zg-lWl">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="space-stars-road" translatesAutoresizingMaskIntoConstraints="NO" id="7NL-zg-lWl"/>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SEESPACE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FxE-k6-In9">
-                                <rect key="frame" x="0.0" y="134" width="375" height="67"/>
                                 <fontDescription key="fontDescription" name="NasalizationRg-Regular" family="Nasalization" pointSize="59"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -42,7 +36,6 @@
                                 <size key="shadowOffset" width="-4" height="5"/>
                             </label>
                             <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7n5-Ol-OZG">
-                                <rect key="frame" x="86" y="503" width="203" height="66"/>
                                 <fontDescription key="fontDescription" name="DIN-Light" family="DIN" pointSize="35"/>
                                 <state key="normal" title="pic of the day">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -51,9 +44,7 @@
                                     <segue destination="nNv-86-YDZ" kind="show" id="GLY-VA-4pc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u3g-hg-9fD">
-                                <rect key="frame" x="144" y="594" width="145" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u3g-hg-9fD">
                                 <fontDescription key="fontDescription" name="DIN-Light" family="DIN" pointSize="35"/>
                                 <state key="normal" title="globe">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -69,12 +60,14 @@
                             <constraint firstItem="FxE-k6-In9" firstAttribute="height" secondItem="hF9-TS-zSK" secondAttribute="height" multiplier="10%" id="AkW-wi-JQy"/>
                             <constraint firstItem="7NL-zg-lWl" firstAttribute="height" secondItem="hF9-TS-zSK" secondAttribute="height" id="PBH-QI-Dfc"/>
                             <constraint firstItem="7NL-zg-lWl" firstAttribute="centerX" secondItem="hF9-TS-zSK" secondAttribute="centerX" id="S9X-o8-v5U"/>
+                            <constraint firstItem="u3g-hg-9fD" firstAttribute="centerX" secondItem="hF9-TS-zSK" secondAttribute="centerX" id="Sfp-vw-fyl"/>
                             <constraint firstItem="7n5-Ol-OZG" firstAttribute="centerX" secondItem="FxE-k6-In9" secondAttribute="centerX" id="YLo-ho-CqE"/>
                             <constraint firstItem="7n5-Ol-OZG" firstAttribute="top" secondItem="FxE-k6-In9" secondAttribute="bottom" multiplier="2.5" id="cEl-b2-lAz"/>
                             <constraint firstItem="FxE-k6-In9" firstAttribute="trailing" secondItem="hF9-TS-zSK" secondAttribute="trailing" id="cMm-Tf-g4I"/>
                             <constraint firstItem="7n5-Ol-OZG" firstAttribute="height" secondItem="hF9-TS-zSK" secondAttribute="height" multiplier="10%" id="cdV-oW-now"/>
                             <constraint firstItem="FxE-k6-In9" firstAttribute="leading" secondItem="hF9-TS-zSK" secondAttribute="leading" id="dNz-C9-AZN"/>
                             <constraint firstItem="7NL-zg-lWl" firstAttribute="width" secondItem="hF9-TS-zSK" secondAttribute="width" id="dYy-bf-bht"/>
+                            <constraint firstItem="u3g-hg-9fD" firstAttribute="top" secondItem="7n5-Ol-OZG" secondAttribute="bottom" id="srr-B0-eIo"/>
                             <constraint firstItem="FxE-k6-In9" firstAttribute="centerY" secondItem="hF9-TS-zSK" secondAttribute="centerY" multiplier="50%" id="xqd-cZ-VRn"/>
                         </constraints>
                     </view>
@@ -101,11 +94,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stars.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="RZy-5N-zqr" userLabel="stars">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stars.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="RZy-5N-zqr" userLabel="stars"/>
                             <sceneKitView multipleTouchEnabled="YES" contentMode="scaleAspectFill" loops="NO" sceneName="globe8.dae" autoenablesDefaultLighting="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2OR-aQ-ZhZ">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </sceneKitView>
                         </subviews>
